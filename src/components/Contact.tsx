@@ -1,4 +1,5 @@
 import womanPoint from "@/assets/woman-point.jpg";
+import { Linkedin, Instagram } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -51,15 +52,20 @@ const Contact = () => {
             </div>
 
             <div className="mt-10 flex gap-3">
-              {["LinkedIn", "Instagram"].map((s) => (
-                <a
-                  key={s}
-                  href="#"
-                  className="rounded-full border border-foreground/30 px-5 py-2 text-sm hover:bg-foreground hover:text-background transition"
-                >
-                  {s}
-                </a>
-              ))}
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                className="h-11 w-11 rounded-full border border-foreground/30 flex items-center justify-center text-foreground hover:bg-foreground hover:text-background transition"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="h-11 w-11 rounded-full border border-foreground/30 flex items-center justify-center text-foreground hover:bg-foreground hover:text-background transition"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
