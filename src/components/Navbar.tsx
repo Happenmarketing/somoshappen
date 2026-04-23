@@ -30,7 +30,7 @@ const Navbar = () => {
     >
       <nav className="container flex items-center justify-between py-4">
         <a href="#inicio" className="text-foreground">
-          <HappenLogo />
+          <HappenLogo variant={scrolled ? "dark" : "light"} />
         </a>
 
         <ul className="hidden lg:flex items-center gap-8 text-sm font-medium text-foreground/80">
