@@ -13,17 +13,16 @@ const Contact = () => {
             </span>
             <h2 className="mt-4 text-balance text-5xl lg:text-7xl font-semibold leading-[1.05]">
               Tomemos{" "}
-              <span className="italic font-light text-primary">un café</span>{" "}
-              y conversemos.
+              <span className="italic font-light text-primary">un café</span>
             </h2>
             <p className="mt-6 max-w-lg text-lg text-foreground/70">
-              Contanos qué necesita decir tu organización. Te respondemos en
-              menos de 24 horas hábiles.
+              Si tenés un desafío de comunicación o diseño, aunque no sepas
+              exactamente cuál es, es una buena razón para tomar un café.
             </p>
 
             <div className="mt-10 space-y-4">
               <a
-                href="mailto:hola@happen.com"
+                href="mailto:hola@happenmarketing.com"
                 className="flex items-center gap-4 group"
               >
                 <span className="h-12 w-12 rounded-full bg-foreground/10 flex items-center justify-center group-hover:bg-primary transition">
@@ -33,11 +32,11 @@ const Contact = () => {
                   </svg>
                 </span>
                 <span className="text-xl font-medium group-hover:text-primary transition">
-                  hola@happen.com
+                  hola@happenmarketing.com
                 </span>
               </a>
               <a
-                href="https://wa.me/59899000000"
+                href="https://wa.me/59897490180"
                 className="flex items-center gap-4 group"
               >
                 <span className="h-12 w-12 rounded-full bg-foreground/10 flex items-center justify-center group-hover:bg-primary transition">
@@ -46,7 +45,7 @@ const Contact = () => {
                   </svg>
                 </span>
                 <span className="text-xl font-medium group-hover:text-primary transition">
-                  +598 99 000 000
+                  +59897490180
                 </span>
               </a>
             </div>
