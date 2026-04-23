@@ -14,10 +14,25 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30);
+    const onScroll = () => {
+      const servicesSection = document.getElementById("que-hacemos");
+      if (!servicesSection) {
+        setScrolled(window.scrollY > 30);
+        return;
+      }
+
+      const triggerPoint = servicesSection.offsetTop - 96;
+      setScrolled(window.scrollY >= triggerPoint);
+    };
+
     onScroll();
     window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, []);
 
   return (
