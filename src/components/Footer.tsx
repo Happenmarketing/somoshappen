@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-secondary text-secondary-foreground py-12">
       <div className="container flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
-        <HappenLogo />
+        <HappenLogo variant="light" />
         <p className="text-sm text-secondary-foreground/60">
           © {new Date().getFullYear()} Happen · Comunicación con sentido. Hecho en Montevideo.
         </p>
