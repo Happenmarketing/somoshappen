@@ -15,14 +15,22 @@ const Navbar = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      const servicesSection = document.getElementById("que-hacemos");
-      if (!servicesSection) {
+      const lightSection = document.getElementById("que-hacemos");
+      const darkAgainSection = document.getElementById("contacto");
+      const offset = 96;
+
+      if (!lightSection) {
         setScrolled(window.scrollY > 30);
         return;
       }
 
-      const triggerPoint = servicesSection.offsetTop - 96;
-      setScrolled(window.scrollY >= triggerPoint);
+      const start = lightSection.offsetTop - offset;
+      const end = darkAgainSection
+        ? darkAgainSection.offsetTop - offset
+        : Infinity;
+
+      const y = window.scrollY;
+      setScrolled(y >= start && y < end);
     };
 
     onScroll();
