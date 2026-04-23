@@ -15,22 +15,38 @@ const Navbar = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      const lightSection = document.getElementById("que-hacemos");
-      const darkAgainSection = document.getElementById("contacto");
-      const offset = 96;
-
-      if (!lightSection) {
+      // Sample the background color of whatever element is right below the navbar
+      const probeY = 80;
+      const el = document.elementFromPoint(window.innerWidth / 2, probeY);
+      if (!el) {
         setScrolled(window.scrollY > 30);
         return;
       }
 
-      const start = lightSection.offsetTop - offset;
-      const end = darkAgainSection
-        ? darkAgainSection.offsetTop - offset
-        : Infinity;
+      // Walk up to find an element with a non-transparent background
+      let node: Element | null = el;
+      let bg = "";
+      while (node && node !== document.body) {
+        const c = getComputedStyle(node).backgroundColor;
+        if (c && c !== "rgba(0, 0, 0, 0)" && c !== "transparent") {
+          bg = c;
+          break;
+        }
+        node = node.parentElement;
+      }
+      if (!bg) bg = getComputedStyle(document.body).backgroundColor;
 
-      const y = window.scrollY;
-      setScrolled(y >= start && y < end);
+      // Parse rgb/rgba and compute luminance
+      const m = bg.match(/\d+(\.\d+)?/g);
+      if (!m) {
+        setScrolled(window.scrollY > 30);
+        return;
+      }
+      const [r, g, b] = m.map(Number);
+      const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+      // Light background -> use dark logo (scrolled=true)
+      setScrolled(luminance > 0.6);
     };
 
     onScroll();
