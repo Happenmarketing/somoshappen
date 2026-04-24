@@ -25,8 +25,8 @@ const Hero = () => {
           </h1>
 
           <p className="mt-8 max-w-xl text-lg text-foreground/75 leading-relaxed">
-            Entendemos tu negocio, construimos la estrategia y la ejecutamos
-            con diseño y contenido de impacto.
+            Entendemos tu negocio, construimos la estrategia de comunicación
+            <br />y la ejecutamos con diseño y contenido de impacto.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -85,7 +85,7 @@ const Hero = () => {
                 +15 años
               </p>
               <p className="mt-1 text-sm font-medium leading-snug">
-                acompañando marcas en Uruguay y la región
+                acompañando empresas en Uruguay y la región
               </p>
             </div>
           </div>
