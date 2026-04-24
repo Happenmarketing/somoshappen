@@ -39,13 +39,13 @@ const logos = [
 const Row = ({ items, reverse = false }: { items: typeof logos; reverse?: boolean }) => (
   <div className="overflow-hidden group">
     <div
-      className="flex w-max animate-marquee gap-16 group-hover:[animation-play-state:paused]"
+      className="flex w-max animate-marquee gap-6 group-hover:[animation-play-state:paused]"
       style={{ animationDirection: reverse ? "reverse" : "normal" }}
     >
       {[...items, ...items].map((logo, i) => (
         <div
           key={`${logo.alt}-${i}`}
-          className="shrink-0 h-32 w-64 flex items-center justify-center"
+          className="shrink-0 h-24 w-44 flex items-center justify-center"
         >
           <img
             src={logo.src}
@@ -80,7 +80,7 @@ const Clients = () => {
         </div>
       </div>
 
-      <div className="mt-14 space-y-8 relative">
+      <div className="mt-10 space-y-3 relative">
         {/* Fade edges */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-[hsl(var(--surface-light))] to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-[hsl(var(--surface-light))] to-transparent" />
