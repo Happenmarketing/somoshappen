@@ -6,7 +6,7 @@ const links = [
   { href: "#que-hacemos", label: "Qué hacemos" },
   { href: "#por-que", label: "Porqué happen" },
   { href: "#como", label: "Cómo trabajamos" },
-  { href: "#clientes", label: "Clientes" },
+  { href: "#clientes", label: "Confían" },
   { href: "#contacto", label: "Contacto" },
 ];
 
