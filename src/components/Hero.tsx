@@ -18,16 +18,15 @@ const Hero = () => {
           </span>
 
           <h1 className="mt-6 text-balance text-4xl sm:text-5xl lg:text-7xl font-semibold leading-[1.05] text-foreground">
-            Entendemos lo que tu organización necesita decir y{" "}
+            Asesoramiento y ejecución para tus necesidades de comunicación y{" "}
             <span className="italic font-light text-primary">
-              logramos que funcione.
+              diseño.
             </span>
           </h1>
 
           <p className="mt-8 max-w-xl text-lg text-foreground/75 leading-relaxed">
-            En un escenario donde la IA multiplica los mensajes, las marcas
-            necesitan ser entendidas, queridas y recordadas. Hacemos comunicación
-            más humana que nunca.
+            En un contexto donde la IA cobra protagonismo, la comunicación va a
+            necesitar ser más humana que nunca.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -83,10 +82,10 @@ const Hero = () => {
             {/* Floating chip */}
             <div className="absolute -bottom-6 -right-4 z-20 rounded-2xl bg-card text-card-foreground px-5 py-4 shadow-card animate-float max-w-[200px]">
               <p className="text-xs uppercase tracking-widest text-muted-foreground">
-                Desde 2018
+                +15 años
               </p>
               <p className="mt-1 text-sm font-medium leading-snug">
-                +60 marcas que confiaron en nosotros
+                acompañando marcas en Uruguay y la región
               </p>
             </div>
           </div>
