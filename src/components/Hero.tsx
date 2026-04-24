@@ -18,15 +18,15 @@ const Hero = () => {
           </span>
 
           <h1 className="mt-6 text-balance text-4xl sm:text-5xl lg:text-7xl font-semibold leading-[1.05] text-foreground">
-            Asesoramiento y ejecución para tus necesidades de comunicación y{" "}
+            Lo mejor que hacemos es{" "}
             <span className="italic font-light text-primary">
-              diseño.
+              entenderte.
             </span>
           </h1>
 
           <p className="mt-8 max-w-xl text-lg text-foreground/75 leading-relaxed">
-            En un contexto donde la IA cobra protagonismo, la comunicación va a
-            necesitar ser más humana que nunca.
+            Entendemos tu negocio, construimos la estrategia y la ejecutamos
+            con diseño y contenido de impacto.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
