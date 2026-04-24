@@ -19,7 +19,7 @@ const steps = [
   {
     n: "4",
     title: "Evaluación",
-    desc: "Medimos resultados, analizamos aprendizajes y proponemos mejoras continuas para optimizar la comunicación.",
+    desc: "Medimos resultados, analizamos aprendizajes y proponemos mejoras continuas para optimizar la comunicación interna y externa.",
   },
 ];
 
@@ -33,9 +33,9 @@ const Process = () => {
               Cómo trabajamos
             </span>
             <h2 className="mt-4 text-balance text-4xl lg:text-6xl font-semibold leading-tight">
-              Un proceso{" "}
-              <span className="italic font-light text-primary">claro,</span>{" "}
-              colaborativo y adaptado a cada organización.
+              Una metodología{" "}
+              <span className="italic font-light text-primary">clara,</span>{" "}
+              colaborativa y adaptada a cada organización.
             </h2>
           </div>
           <div className="lg:col-span-5">

@@ -3,15 +3,15 @@ import womanPhone from "@/assets/woman-phone.jpg";
 const services = [
   {
     title: "Comunicación interna",
-    desc: "Planes, campañas y gestión de la comunicación con colaboradores. Diagnóstico, implementación y evaluación.",
+    desc: "Diagnosticamos cómo te estás comunicando en la interna y definimos una estrategia y plan de acción que haga sentido. Nos ocupamos de todo: desde la planificación estratégica hasta la ejecución de cada campaña, para que todos tus colaboradores estén motivados e informados.",
   },
   {
-    title: "Diseño & identidad",
-    desc: "Branding, identidad visual, diseño editorial, packaging y piezas corporativas. Criterio creativo en cada pieza.",
+    title: "Diseño gráfico",
+    desc: "Somos el diseñador de tu empresa. También diseñamos piezas específicas para tus necesidades puntuales. Desde un diseño de identidad hasta un mailing, ¡si tenés una necesidad de diseño lo hacemos posible!",
   },
   {
-    title: "Comunicación externa",
-    desc: "Comunicación de marca coherente en todos los puntos de contacto. Estrategia, contenido para redes, comunidades, influencers y pauta digital.",
+    title: "Comunicación digital",
+    desc: "Comunicamos tu marca de forma coherente con tu público objetivo en todos los puntos de contacto. Armamos tu plan estratégico y lo ejecutamos: contenido para redes y canales digitales, gestión de influencers, ejecución y optimización de pauta digital.",
   },
 ];
 
@@ -25,7 +25,7 @@ const Services = () => {
               Qué hacemos
             </span>
             <h2 className="mt-4 text-balance text-4xl lg:text-6xl font-semibold leading-[1.05]">
-              Comunicación y diseño{" "}
+              Somos expertos en comunicación y diseño{" "}
               <span className="italic font-light text-primary">con sentido,</span>{" "}
               en todos los frentes.
             </h2>
