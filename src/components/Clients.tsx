@@ -1,6 +1,8 @@
 const clients = [
-  "Banco Itaú", "Movistar", "Salus", "Tata", "Conaprole",
-  "Antel", "Pedidos Ya", "BBVA", "Universidad ORT", "Disco",
+  "Zurich", "Santander", "El País", "Plus Ultra", "Ricoh",
+  "Grupo Unicomer", "Pronto!", "dLocal", "Benoit", "Denucio",
+  "Payments Ed", "Buemes", "Uruguay 365", "Innotec", "Revista LATU",
+  "Devoto", "GDU", "Punta Carretas", "COCEMI", "GAMA Italy",
 ];
 
 const Clients = () => {
@@ -12,11 +14,11 @@ const Clients = () => {
             Confían en nosotros
           </span>
           <h2 className="mt-4 text-3xl lg:text-4xl font-semibold">
-            Marcas que eligen comunicar con sentido.
+            Acompañamos a organizaciones en Uruguay y la región desde hace +15 años.
           </h2>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-px bg-foreground/10 rounded-3xl overflow-hidden border border-foreground/10">
+        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-px bg-foreground/10 rounded-3xl overflow-hidden border border-foreground/10">
           {clients.map((c) => (
             <div
               key={c}

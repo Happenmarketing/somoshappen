@@ -16,25 +16,26 @@ const Why = () => {
 
         <div className="lg:col-span-7 order-1 lg:order-2">
           <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
-            Por qué Happen
+            Porqué happen
           </span>
           <h2 className="mt-4 text-balance text-4xl lg:text-6xl font-semibold leading-tight">
-            La IA puede producir contenido. Lo que no puede{" "}
+            Entramos, vemos lo que pasa y{" "}
             <span className="italic font-light text-primary">
-              es entender tu organización.
+              lo resolvemos con vos.
             </span>
           </h2>
           <p className="mt-8 max-w-xl text-lg text-foreground/70 leading-relaxed">
-            Lejos de desaparecer, la comunicación va a necesitar ser más humana
-            que nunca. Nosotros traemos criterio, estrategia y oficio a cada
-            mensaje que tu marca emite.
+            Visitamos, entrevistamos, observamos, escuchamos a clientes y
+            colaboradores. Entendemos la cultura, las tensiones y lo que no se
+            dice en las reuniones. Pensamos la estrategia y la llevamos a la
+            acción, sin intermediarios y sin pérdida de sentido.
           </p>
 
           <div className="mt-10 grid sm:grid-cols-3 gap-6">
             {[
-              { n: "08", t: "Años de experiencia" },
-              { n: "60+", t: "Marcas acompañadas" },
-              { n: "100%", t: "Hecho con sentido" },
+              { n: "+15", t: "Años de experiencia" },
+              { n: "Boutique", t: "Equipo comprometido y cercano" },
+              { n: "In-house", t: "Equipo multidisciplinario propio" },
             ].map((s) => (
               <div key={s.n} className="border-l-2 border-primary pl-4">
                 <div className="text-4xl font-semibold">{s.n}</div>
