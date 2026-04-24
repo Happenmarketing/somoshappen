@@ -14,7 +14,6 @@ const Clients = () => {
             Confían en nosotros
           </span>
           <h2 className="mt-4 text-3xl lg:text-4xl font-semibold">
-            Acompañamos a organizaciones en Uruguay y la región desde hace +15 años.
           </h2>
         </div>
 
