@@ -4,8 +4,9 @@ import HappenLogo from "./HappenLogo";
 const links = [
   { href: "#inicio", label: "Inicio" },
   { href: "#que-hacemos", label: "Qué hacemos" },
+  { href: "#por-que", label: "Porqué happen" },
   { href: "#como", label: "Cómo trabajamos" },
-  { href: "#nosotros", label: "Nosotros" },
+  { href: "#clientes", label: "Clientes" },
   { href: "#contacto", label: "Contacto" },
 ];
 
