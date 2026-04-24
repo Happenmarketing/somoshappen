@@ -19,9 +19,8 @@ const Why = () => {
             Porqué happen
           </span>
           <p className="mt-4 max-w-xl text-base lg:text-lg text-foreground/70 leading-relaxed italic">
-            En un contexto donde la IA acelera procesos y democratiza
-            herramientas, lo que marca la diferencia es la mirada humana: la
-            capacidad de entender, interpretar y construir con sentido.
+            En un contexto donde la IA cobra protagonismo, la comunicación va a
+            necesitar ser más humana que nunca.
           </p>
           <h2 className="mt-6 text-balance text-4xl lg:text-6xl font-semibold leading-tight">
             Entramos, vemos lo que pasa y{" "}
