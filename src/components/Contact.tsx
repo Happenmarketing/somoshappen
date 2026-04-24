@@ -13,7 +13,6 @@ const Contact = () => {
               Hablemos
             </span>
             <h2 className="mt-4 text-balance text-5xl lg:text-7xl font-semibold leading-[1.05]">
-              Hablemos.{" "}
               <span className="italic font-light text-primary">Tomemos un café.</span>
             </h2>
             <p className="mt-6 max-w-lg text-lg text-foreground/70">
