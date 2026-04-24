@@ -29,7 +29,7 @@ const Why = () => {
             </span>
           </h2>
           <p className="mt-8 max-w-xl text-lg text-foreground/70 leading-relaxed">
-            Visitamos, entrevistamos, observamos, escuchamos a clientes y
+            Visitamos, observamos y escuchamos a clientes y
             colaboradores. Entendemos la cultura, las tensiones y lo que no se
             dice en las reuniones. Pensamos la estrategia y la llevamos a la
             acción, sin intermediarios y sin pérdida de sentido.
@@ -39,7 +39,7 @@ const Why = () => {
             {[
               { n: "+15", t: "Años de experiencia" },
               { n: "Boutique", t: "Equipo comprometido y cercano" },
-              { n: "In-house", t: "Equipo multidisciplinario propio" },
+              { n: "In-house", t: "Equipo multidisciplinario para brindar un servicio integral" },
             ].map((s) => (
               <div key={s.n} className="border-l-2 border-primary pl-4">
                 <div className="text-4xl font-semibold">{s.n}</div>
