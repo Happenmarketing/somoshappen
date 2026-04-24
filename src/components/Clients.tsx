@@ -13,8 +13,6 @@ const Clients = () => {
           <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
             Confían en nosotros
           </span>
-          <h2 className="mt-4 text-3xl lg:text-4xl font-semibold">
-          </h2>
         </div>
 
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-px bg-foreground/10 rounded-3xl overflow-hidden border border-foreground/10">
