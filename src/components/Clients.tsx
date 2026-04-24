@@ -11,7 +11,7 @@ const Clients = () => {
       <div className="container">
         <div className="text-center max-w-2xl mx-auto">
           <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
-            Confían en nosotros
+            CONFÍAN EN NOSOTROS
           </span>
           <h2 className="mt-4 text-3xl lg:text-4xl font-semibold">
             Marcas y organizaciones que ya viven la experiencia happen.
