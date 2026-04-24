@@ -71,6 +71,27 @@ const Cases = () => {
       id="casos"
       className="bg-background text-foreground py-20 lg:py-28"
     >
+      {/* SVG duotone filter: maps blacks to brand navy, whites to brand light */}
+      <svg className="absolute w-0 h-0" aria-hidden="true">
+        <defs>
+          <filter id="duotone-happen">
+            <feColorMatrix
+              type="matrix"
+              values="0.299 0.587 0.114 0 0
+                      0.299 0.587 0.114 0 0
+                      0.299 0.587 0.114 0 0
+                      0     0     0     1 0"
+            />
+            <feComponentTransfer colorInterpolationFilters="sRGB">
+              {/* dark -> deep navy hsl(230 60% 18%) ≈ #131e4a, light -> soft lavender hsl(240 40% 95%) ≈ #ebebf5 */}
+              <feFuncR tableValues="0.075 0.92" type="table" />
+              <feFuncG tableValues="0.118 0.92" type="table" />
+              <feFuncB tableValues="0.290 0.96" type="table" />
+            </feComponentTransfer>
+          </filter>
+        </defs>
+      </svg>
+
       <div className="container">
         <div className="max-w-2xl">
           <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
@@ -88,32 +109,42 @@ const Cases = () => {
           {cases.map((c) => (
             <article
               key={c.client}
-              className={`group relative overflow-hidden rounded-2xl bg-foreground/5 cursor-pointer aspect-[4/3] md:aspect-auto ${c.span}`}
+              className={`group relative overflow-hidden rounded-2xl bg-secondary cursor-pointer aspect-[4/3] md:aspect-auto ${c.span}`}
             >
+              {/* Duotoned image (default state) */}
               <img
                 src={c.image}
                 alt={c.client}
                 loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover grayscale group-hover:grayscale-0 scale-105 group-hover:scale-100 transition-all duration-700 ease-out"
+                style={{ filter: "url(#duotone-happen)" }}
+                className="absolute inset-0 h-full w-full object-cover scale-105 group-hover:scale-100 group-hover:opacity-0 transition-all duration-700 ease-out"
+              />
+              {/* Real color image (hover state) */}
+              <img
+                src={c.image}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out"
               />
 
               {/* Always-visible bottom gradient + name */}
-              <div className="absolute inset-x-0 bottom-0 p-5 md:p-6 bg-gradient-to-t from-black/80 via-black/30 to-transparent text-white transition-opacity duration-500 group-hover:opacity-0">
+              <div className="absolute inset-x-0 bottom-0 p-5 md:p-6 bg-gradient-to-t from-black/85 via-black/40 to-transparent text-white transition-opacity duration-500 group-hover:opacity-0 pointer-events-none">
                 <h3 className="text-xl md:text-2xl font-semibold leading-tight">
                   {c.client}
                 </h3>
               </div>
 
-              {/* Hover overlay */}
-              <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-7 bg-gradient-to-t from-primary/95 via-primary/85 to-primary/40 text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              {/* Hover info overlay */}
+              <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-7 bg-gradient-to-t from-black/90 via-black/60 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                 <div className="translate-y-3 group-hover:translate-y-0 transition-transform duration-500">
                   <h3 className="text-xl md:text-2xl font-semibold leading-tight">
                     {c.client}
                   </h3>
-                  <p className="mt-1 text-xs md:text-sm uppercase tracking-wider opacity-90">
+                  <p className="mt-1 text-xs md:text-sm uppercase tracking-wider text-primary-foreground/80">
                     {c.category}
                   </p>
-                  <p className="mt-3 text-sm md:text-[15px] leading-relaxed opacity-95 line-clamp-5">
+                  <p className="mt-3 text-sm md:text-[15px] leading-relaxed text-white/90 line-clamp-5">
                     {c.description}
                   </p>
                 </div>
