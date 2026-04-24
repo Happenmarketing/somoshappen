@@ -18,7 +18,12 @@ const Why = () => {
           <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
             Porqué happen
           </span>
-          <h2 className="mt-4 text-balance text-4xl lg:text-6xl font-semibold leading-tight">
+          <p className="mt-4 max-w-xl text-base lg:text-lg text-foreground/70 leading-relaxed italic">
+            En un contexto donde la IA acelera procesos y democratiza
+            herramientas, lo que marca la diferencia es la mirada humana: la
+            capacidad de entender, interpretar y construir con sentido.
+          </p>
+          <h2 className="mt-6 text-balance text-4xl lg:text-6xl font-semibold leading-tight">
             Entramos, vemos lo que pasa y{" "}
             <span className="italic font-light text-primary">
               lo resolvemos con vos.
