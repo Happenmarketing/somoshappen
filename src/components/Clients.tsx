@@ -15,6 +15,7 @@ import cocemi from "@/assets/clients/cocemi.png";
 import gdu from "@/assets/clients/gdu.png";
 import puntacarretas from "@/assets/clients/puntacarretas.png";
 import gama from "@/assets/clients/gama.png";
+import focap from "@/assets/clients/focap.png";
 
 const logos = [
   { src: zurichSantander, alt: "Zurich y Santander" },
@@ -34,6 +35,7 @@ const logos = [
   { src: gdu, alt: "GDU" },
   { src: puntacarretas, alt: "Punta Carretas Shopping" },
   { src: gama, alt: "GAMA Italy" },
+  { src: focap, alt: "Focap" },
 ];
 
 const Row = ({ items, reverse = false }: { items: typeof logos; reverse?: boolean }) => (
