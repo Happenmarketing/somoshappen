@@ -70,7 +70,7 @@ const Hero = () => {
                 <img
                   src={happenIcon}
                   alt="happen"
-                  className="h-10 w-10 object-contain [filter:invert(1)]"
+                  className="h-10 w-10 object-contain"
                 />
               </div>
             </div>
