@@ -45,7 +45,7 @@ const Row = ({ items, reverse = false }: { items: typeof logos; reverse?: boolea
       {[...items, ...items].map((logo, i) => (
         <div
           key={`${logo.alt}-${i}`}
-          className="shrink-0 h-24 w-44 flex items-center justify-center"
+          className="shrink-0 h-32 w-56 flex items-center justify-center"
         >
           <img
             src={logo.src}
