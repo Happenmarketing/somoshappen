@@ -1,4 +1,5 @@
 import womanSurprise from "@/assets/woman-surprise.jpg";
+import happenIcon from "@/assets/happen-icon-white.png";
 
 const Hero = () => {
   return (
@@ -66,7 +67,11 @@ const Hero = () => {
                 </text>
               </svg>
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-foreground text-xl font-bold">hn</span>
+                <img
+                  src={happenIcon}
+                  alt="happen"
+                  className="h-10 w-10 object-contain [filter:invert(1)]"
+                />
               </div>
             </div>
 
