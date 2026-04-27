@@ -98,7 +98,7 @@ const Cases = () => {
             CASOS DE ÉXITO
           </span>
           <h2 className="mt-4 text-3xl lg:text-5xl font-semibold leading-tight">
-            Proyectos que hicimos happen.
+            Algunos de nuestros proyectos.
           </h2>
           <p className="mt-4 text-foreground/70 text-lg">
             Marcas y organizaciones que confiaron en nosotros para llevar su comunicación al siguiente nivel.

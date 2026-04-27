@@ -18,7 +18,7 @@ const Hero = () => {
           </span>
 
           <h1 className="mt-6 text-balance text-4xl sm:text-5xl lg:text-7xl font-semibold leading-[1.05] text-foreground">
-            Lo mejor que hacemos es{" "}
+            Lo que mejor hacemos es{" "}
             <span className="italic font-light text-primary">
               entenderte.
             </span>
