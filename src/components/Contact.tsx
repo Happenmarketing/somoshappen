@@ -52,14 +52,18 @@ const Contact = () => {
 
             <div className="mt-10 flex gap-3">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/happen-marketing/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="h-11 w-11 rounded-full border border-foreground/30 flex items-center justify-center text-foreground hover:bg-foreground hover:text-background transition"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/happen.marketing/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="h-11 w-11 rounded-full border border-foreground/30 flex items-center justify-center text-foreground hover:bg-foreground hover:text-background transition"
               >
