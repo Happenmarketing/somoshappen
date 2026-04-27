@@ -61,7 +61,7 @@ const Contact = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://www.instagram.com/happen.marketing/"
+                href="https://www.instagram.com/somoshappen/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
