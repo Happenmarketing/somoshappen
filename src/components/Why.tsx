@@ -9,7 +9,7 @@ const Why = () => {
             <div className="absolute inset-0 -translate-x-4 translate-y-4 rounded-[2rem] border-2 border-primary" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
               <div className="absolute inset-0 bg-secondary/30 mix-blend-multiply z-10" />
-              <img src={womanOk} alt="Por qué Happen" className="h-full w-full object-cover duotone" />
+              <img src={womanOk} alt="Por qué Happen" loading="lazy" decoding="async" className="h-full w-full object-cover duotone" />
             </div>
           </div>
         </div>

@@ -33,7 +33,7 @@ const Services = () => {
             <div className="relative mt-10 max-w-xs mx-auto">
               <div className="aspect-[200/223] overflow-hidden rounded-[2rem]">
                 <div className="absolute inset-0 bg-secondary/20 mix-blend-multiply z-10 rounded-[2rem]" />
-                <img src={womanPhone} alt="Servicios" className="h-full w-full object-cover duotone" />
+                <img src={womanPhone} alt="Servicios" loading="lazy" decoding="async" className="h-full w-full object-cover duotone" />
               </div>
             </div>
           </div>

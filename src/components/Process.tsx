@@ -41,7 +41,7 @@ const Process = () => {
           <div className="lg:col-span-5">
             <div className="relative max-w-[260px] ml-auto">
               <div className="aspect-square overflow-hidden rounded-full border-4 border-primary/40">
-                <img src={womanBinoc} alt="Proceso" className="h-full w-full object-cover duotone" />
+                <img src={womanBinoc} alt="Proceso" loading="lazy" decoding="async" className="h-full w-full object-cover duotone" />
               </div>
             </div>
           </div>
