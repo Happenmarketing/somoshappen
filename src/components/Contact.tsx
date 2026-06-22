@@ -1,4 +1,6 @@
-import { Linkedin, Instagram } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Linkedin, Instagram, CheckCircle } from "lucide-react";
+import { toast } from "sonner";
 
 const Contact = () => {
   return (
