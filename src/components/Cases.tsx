@@ -1,9 +1,9 @@
-import gama from "@/assets/cases/gama.jpg";
-import disco from "@/assets/cases/disco.jpg";
-import gasoducto from "@/assets/cases/gasoducto.jpg";
-import denucio from "@/assets/cases/denucio.jpg";
-import unicomer from "@/assets/cases/unicomer.jpg";
-import cocemi from "@/assets/cases/cocemi.jpg";
+import gama from "@/assets/cases/gama.webp";
+import disco from "@/assets/cases/disco.webp";
+import gasoducto from "@/assets/cases/gasoducto.webp";
+import denucio from "@/assets/cases/denucio.webp";
+import unicomer from "@/assets/cases/unicomer.webp";
+import cocemi from "@/assets/cases/cocemi.webp";
 
 type Case = {
   client: string;

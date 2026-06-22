@@ -1,4 +1,4 @@
-import womanOk from "@/assets/woman-ok.jpg";
+import womanOk from "@/assets/woman-ok.webp";
 
 const Why = () => {
   return (

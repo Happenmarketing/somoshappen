@@ -1,4 +1,4 @@
-import womanBinoc from "@/assets/woman-binoculars.jpg";
+import womanBinoc from "@/assets/woman-binoculars.webp";
 
 const steps = [
   {

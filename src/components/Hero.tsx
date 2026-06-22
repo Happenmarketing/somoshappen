@@ -1,4 +1,4 @@
-import womanSurprise from "@/assets/woman-surprise.jpg";
+import womanSurprise from "@/assets/woman-surprise.webp";
 import happenIcon from "@/assets/happen-icon-white.png";
 
 const Hero = () => {
