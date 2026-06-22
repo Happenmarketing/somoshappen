@@ -1,4 +1,3 @@
-import womanPoint from "@/assets/woman-point.jpg";
 import { Linkedin, Instagram } from "lucide-react";
 
 const Contact = () => {
