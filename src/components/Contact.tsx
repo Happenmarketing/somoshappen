@@ -1,18 +1,42 @@
-import { useState, useEffect } from "react";
-import { Linkedin, Instagram, CheckCircle } from "lucide-react";
+import { useState, FormEvent } from "react";
+import { Linkedin, Instagram, CheckCircle, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [enviado, setEnviado] = useState(false);
+  const [enviando, setEnviando] = useState(false);
 
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("gracias") === "1") {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const payload = {
+      nombre: String(data.get("nombre") || ""),
+      email: String(data.get("email") || ""),
+      mensaje: String(data.get("mensaje") || ""),
+    };
+
+    setEnviando(true);
+    try {
+      const { error } = await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-form-notification",
+          idempotencyKey: `contact-${Date.now()}-${payload.email}`,
+          templateData: payload,
+        },
+      });
+      if (error) throw error;
       setEnviado(true);
       toast.success("¡Mensaje enviado! Te responderemos pronto.");
-      window.history.replaceState({}, "", window.location.pathname + window.location.hash);
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      toast.error("No pudimos enviar el mensaje. Probá de nuevo o escribinos a hola@happenmarketing.com");
+    } finally {
+      setEnviando(false);
     }
-  }, []);
+  };
 
   return (
     <section id="contacto" className="bg-background text-foreground py-24 lg:py-32 relative overflow-hidden">
@@ -93,14 +117,9 @@ const Contact = () => {
               </div>
             ) : (
             <form
-              action="https://formsubmit.co/hola@happenmarketing.com"
-              method="POST"
+              onSubmit={handleSubmit}
               className="relative rounded-[2rem] bg-foreground/5 p-8 shadow-soft border border-foreground/10"
             >
-              <input type="hidden" name="_subject" value="Nuevo mensaje desde Happen" />
-              <input type="hidden" name="_next" value="https://www.somoshappen.com/?gracias=1#contacto" />
-              <input type="hidden" name="_captcha" value="false" />
-
               <div className="space-y-5">
                 <div>
                   <label htmlFor="nombre" className="block text-sm font-medium mb-2">
@@ -146,9 +165,17 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full rounded-xl bg-primary text-primary-foreground font-semibold px-6 py-3.5 hover:bg-primary/90 transition shadow-soft"
+                  disabled={enviando}
+                  className="w-full rounded-xl bg-primary text-primary-foreground font-semibold px-6 py-3.5 hover:bg-primary/90 transition shadow-soft disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                  Enviar mensaje
+                  {enviando ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                      Enviando...
+                    </>
+                  ) : (
+                    "Enviar mensaje"
+                  )}
                 </button>
               </div>
             </form>
