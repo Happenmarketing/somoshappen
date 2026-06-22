@@ -80,6 +80,8 @@ const Hero = () => {
               <img
                 src={womanSurprise}
                 alt="Comunicación con sentido"
+                fetchPriority="high"
+                decoding="async"
                 className="h-full w-full object-cover duotone"
               />
             </div>
