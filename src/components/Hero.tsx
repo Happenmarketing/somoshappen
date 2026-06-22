@@ -32,7 +32,7 @@ const Hero = () => {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="#contacto"
+              href="mailto:hola@happenmarketing.com"
               className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-7 py-3.5 text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all"
             >
               Tomemos un café
