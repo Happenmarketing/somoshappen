@@ -1,4 +1,4 @@
-import womanPhone from "@/assets/woman-phone.webp.asset.json";
+import womanPhone from "@/assets/woman-phone.webp";
 
 const services = [
   {
