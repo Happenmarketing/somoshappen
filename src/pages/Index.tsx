@@ -19,8 +19,8 @@ const Index = () => {
         <Services />
         <Why />
         <Process />
-        <Cases />
         <Clients />
+        <Cases />
         <Contact />
         <Footer />
       </Suspense>
