@@ -152,6 +152,7 @@ const Contact = () => {
                 </button>
               </div>
             </form>
+            )}
           </div>
         </div>
       </div>
