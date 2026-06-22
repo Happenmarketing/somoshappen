@@ -25,7 +25,7 @@ const steps = [
 
 const Process = () => {
   return (
-    <section id="como" className="bg-background text-foreground py-24 lg:py-32 relative overflow-hidden">
+    <section id="como" className="bg-background text-foreground pt-8 lg:pt-12 pb-24 lg:pb-32 relative overflow-hidden">
       <div className="container relative">
         <div className="grid lg:grid-cols-12 gap-12 items-end mb-16">
           <div className="lg:col-span-7">
