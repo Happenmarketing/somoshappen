@@ -6,8 +6,8 @@ const links = [
   { href: "#que-hacemos", label: "Qué hacemos" },
   { href: "#por-que", label: "Porqué happen" },
   { href: "#como", label: "Cómo trabajamos" },
-  { href: "#casos", label: "Casos" },
   { href: "#clientes", label: "Confían" },
+  { href: "#casos", label: "Proyectos" },
 ];
 
 const Navbar = () => {
