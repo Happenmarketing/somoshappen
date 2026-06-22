@@ -3,6 +3,17 @@ import { Linkedin, Instagram, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact = () => {
+  const [enviado, setEnviado] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("gracias") === "1") {
+      setEnviado(true);
+      toast.success("¡Mensaje enviado! Te responderemos pronto.");
+      window.history.replaceState({}, "", window.location.pathname + window.location.hash);
+    }
+  }, []);
+
   return (
     <section id="contacto" className="bg-background text-foreground py-24 lg:py-32 relative overflow-hidden">
       <div className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-primary/30 blur-3xl" />
