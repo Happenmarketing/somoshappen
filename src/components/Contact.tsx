@@ -85,13 +85,20 @@ const Contact = () => {
           </div>
 
           <div className="lg:col-span-5">
+            {enviado ? (
+              <div className="relative rounded-[2rem] bg-primary/10 p-8 border border-primary/20 flex flex-col items-center text-center gap-4">
+                <CheckCircle className="h-12 w-12 text-primary" />
+                <h3 className="text-2xl font-semibold">¡Gracias por escribirnos!</h3>
+                <p className="text-foreground/70">Recibimos tu mensaje y te responderemos lo antes posible.</p>
+              </div>
+            ) : (
             <form
               action="https://formsubmit.co/hola@happenmarketing.com"
               method="POST"
               className="relative rounded-[2rem] bg-foreground/5 p-8 shadow-soft border border-foreground/10"
             >
               <input type="hidden" name="_subject" value="Nuevo mensaje desde Happen" />
-              <input type="hidden" name="_next" value="https://www.somoshappen.com" />
+              <input type="hidden" name="_next" value="https://www.somoshappen.com/?gracias=1#contacto" />
               <input type="hidden" name="_captcha" value="false" />
 
               <div className="space-y-5">
