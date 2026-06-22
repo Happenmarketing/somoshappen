@@ -1,6 +1,19 @@
-import { Linkedin, Instagram } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Linkedin, Instagram, CheckCircle } from "lucide-react";
+import { toast } from "sonner";
 
 const Contact = () => {
+  const [enviado, setEnviado] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("gracias") === "1") {
+      setEnviado(true);
+      toast.success("¡Mensaje enviado! Te responderemos pronto.");
+      window.history.replaceState({}, "", window.location.pathname + window.location.hash);
+    }
+  }, []);
+
   return (
     <section id="contacto" className="bg-background text-foreground py-24 lg:py-32 relative overflow-hidden">
       <div className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-primary/30 blur-3xl" />
@@ -72,13 +85,20 @@ const Contact = () => {
           </div>
 
           <div className="lg:col-span-5">
+            {enviado ? (
+              <div className="relative rounded-[2rem] bg-primary/10 p-8 border border-primary/20 flex flex-col items-center text-center gap-4">
+                <CheckCircle className="h-12 w-12 text-primary" />
+                <h3 className="text-2xl font-semibold">¡Gracias por escribirnos!</h3>
+                <p className="text-foreground/70">Recibimos tu mensaje y te responderemos lo antes posible.</p>
+              </div>
+            ) : (
             <form
               action="https://formsubmit.co/hola@happenmarketing.com"
               method="POST"
               className="relative rounded-[2rem] bg-foreground/5 p-8 shadow-soft border border-foreground/10"
             >
               <input type="hidden" name="_subject" value="Nuevo mensaje desde Happen" />
-              <input type="hidden" name="_next" value="https://www.somoshappen.com" />
+              <input type="hidden" name="_next" value="https://www.somoshappen.com/?gracias=1#contacto" />
               <input type="hidden" name="_captcha" value="false" />
 
               <div className="space-y-5">
@@ -132,6 +152,7 @@ const Contact = () => {
                 </button>
               </div>
             </form>
+            )}
           </div>
         </div>
       </div>
