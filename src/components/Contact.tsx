@@ -73,15 +73,66 @@ const Contact = () => {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="relative max-w-sm mx-auto">
-              <div className="absolute -top-4 -right-4 z-20 rounded-full bg-primary text-primary-foreground px-5 py-3 text-sm font-medium shadow-soft rotate-6">
-                ¡Hablemos!
+            <form
+              action="https://formsubmit.co/hola@happenmarketing.com"
+              method="POST"
+              className="relative rounded-[2rem] bg-foreground/5 p-8 shadow-soft border border-foreground/10"
+            >
+              <input type="hidden" name="_subject" value="Nuevo mensaje desde Happen" />
+              <input type="hidden" name="_next" value="https://www.somoshappen.com" />
+              <input type="hidden" name="_captcha" value="false" />
+
+              <div className="space-y-5">
+                <div>
+                  <label htmlFor="nombre" className="block text-sm font-medium mb-2">
+                    Nombre
+                  </label>
+                  <input
+                    id="nombre"
+                    name="nombre"
+                    type="text"
+                    required
+                    placeholder="Tu nombre"
+                    className="w-full rounded-xl bg-foreground/5 border border-foreground/20 px-4 py-3 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="tu@email.com"
+                    className="w-full rounded-xl bg-foreground/5 border border-foreground/20 px-4 py-3 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="mensaje" className="block text-sm font-medium mb-2">
+                    Mensaje
+                  </label>
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    required
+                    rows={4}
+                    placeholder="Contanos sobre tu proyecto..."
+                    className="w-full rounded-xl bg-foreground/5 border border-foreground/20 px-4 py-3 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition resize-none"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full rounded-xl bg-primary text-primary-foreground font-semibold px-6 py-3.5 hover:bg-primary/90 transition shadow-soft"
+                >
+                  Enviar mensaje
+                </button>
               </div>
-              <div className="aspect-[4/5] overflow-hidden rounded-[2rem] shadow-soft">
-                <div className="absolute inset-0 bg-primary/15 mix-blend-multiply z-10 rounded-[2rem]" />
-                <img src={womanPoint} alt="Contacto" className="h-full w-full object-cover duotone" />
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
