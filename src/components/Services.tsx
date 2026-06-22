@@ -31,7 +31,7 @@ const Services = () => {
             </h2>
 
             <div className="relative mt-10 max-w-xs">
-              <div className="aspect-[4/5] overflow-hidden rounded-[2rem] flex items-end">
+              <div className="aspect-[4/5] overflow-hidden rounded-[2rem] flex items-end p-6">
                 <div className="absolute inset-0 bg-secondary/20 mix-blend-multiply z-10 rounded-[2rem]" />
                 <img src={womanPhone} alt="Servicios" className="w-full object-contain duotone" />
               </div>
