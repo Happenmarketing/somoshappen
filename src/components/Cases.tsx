@@ -95,13 +95,13 @@ const Cases = () => {
       <div className="container">
         <div className="max-w-2xl">
           <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
-            CASOS DE ÉXITO
+            PROYECTOS
           </span>
           <h2 className="mt-4 text-3xl lg:text-5xl font-semibold leading-tight">
             Algunos de nuestros proyectos.
           </h2>
           <p className="mt-4 text-foreground/70 text-lg">
-            Marcas y organizaciones que confiaron en nosotros para llevar su comunicación al siguiente nivel.
+            
           </p>
         </div>
 
