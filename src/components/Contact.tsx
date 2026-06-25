@@ -62,8 +62,8 @@ const Contact = () => {
           {enviado ? (
             <div className="relative rounded-[2rem] bg-primary/10 p-8 border border-primary/20 flex flex-col items-center text-center gap-4">
               <CheckCircle className="h-12 w-12 text-primary" />
-              <h3 className="text-2xl font-semibold">¡Gracias por escribirnos!</h3>
-              <p className="text-foreground/70">Recibimos tu mensaje y te responderemos lo antes posible.</p>
+              <h3 className="text-2xl font-semibold">¡Recibimos tu mensaje!</h3>
+              <p className="text-foreground/70">Te respondemos en las próximas horas.</p>
             </div>
           ) : (
             <form
