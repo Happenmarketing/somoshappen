@@ -111,6 +111,25 @@ Deno.serve(async (req) => {
     )
   }
 
+  // Server-side validation of templateData for known templates.
+  const schema = TEMPLATE_DATA_SCHEMAS[templateName]
+  if (schema) {
+    const parsed = schema.safeParse(templateData)
+    if (!parsed.success) {
+      return new Response(
+        JSON.stringify({
+          error: 'Invalid templateData',
+          details: parsed.error.flatten().fieldErrors,
+        }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
+      )
+    }
+    templateData = parsed.data
+  }
+
   // Resolve effective recipient: template-level `to` takes precedence over
   // the caller-provided recipientEmail. This allows notification templates
   // to always send to a fixed address (e.g., site owner from env var).
