@@ -71,7 +71,18 @@ const Clients = () => {
       id="clientes"
       className="bg-[hsl(var(--surface-light))] text-[hsl(var(--surface-light-foreground))] py-14 md:py-20"
     >
-      <div className="mt-4 space-y-3 relative">
+      <div className="container">
+        <div className="text-center max-w-2xl mx-auto">
+          <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
+            CONFÍAN EN NOSOTROS
+          </span>
+          <h2 className="mt-4 text-3xl lg:text-4xl font-semibold">
+            Marcas y organizaciones que ya viven la experiencia happen.
+          </h2>
+        </div>
+      </div>
+
+      <div className="mt-10 space-y-3 relative">
         {/* Fade edges */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-[hsl(var(--surface-light))] to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-[hsl(var(--surface-light))] to-transparent" />
