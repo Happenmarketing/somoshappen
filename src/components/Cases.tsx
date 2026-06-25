@@ -100,9 +100,6 @@ const Cases = () => {
           <h2 className="mt-4 text-3xl lg:text-5xl font-semibold leading-tight">
             Algunos de nuestros proyectos.
           </h2>
-          <p className="mt-4 text-foreground/70 text-lg">
-            
-          </p>
         </div>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-12 md:auto-rows-[220px] gap-4">
