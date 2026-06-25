@@ -77,7 +77,7 @@ const Clients = () => {
             CONFÍAN EN NOSOTROS
           </span>
           <h2 className="mt-4 text-3xl lg:text-4xl font-semibold">
-            Marcas y organizaciones que ya viven la experiencia happen.
+            Empresas que nos eligen.&nbsp;
           </h2>
         </div>
       </div>
