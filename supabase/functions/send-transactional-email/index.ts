@@ -3,6 +3,17 @@ import { renderAsync } from 'npm:@react-email/components@0.0.22'
 import { createClient } from 'npm:@supabase/supabase-js@2'
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors'
 import { TEMPLATES } from '../_shared/transactional-email-templates/registry.ts'
+import { z } from 'npm:zod@3.23.8'
+
+// Per-template server-side validators for templateData.
+// Add an entry here when adding a template that accepts caller-supplied data.
+const TEMPLATE_DATA_SCHEMAS: Record<string, z.ZodTypeAny> = {
+  'contact-form-notification': z.object({
+    nombre: z.string().trim().min(1).max(100),
+    email: z.string().trim().email().max(254),
+    mensaje: z.string().trim().min(1).max(5000),
+  }),
+}
 
 // Configuration baked in at scaffold time — do NOT change these manually.
 // To update, re-run the email domain setup flow.
