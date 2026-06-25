@@ -17,7 +17,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="que-hacemos" className="bg-[hsl(var(--surface-light))] text-[hsl(var(--surface-light-foreground))] py-24 lg:py-32">
+    <section id="que-hacemos" className="bg-[hsl(var(--surface-light))] text-[hsl(var(--surface-light-foreground))] py-14 md:py-24 lg:py-32">
       <div className="container">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">

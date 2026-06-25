@@ -69,7 +69,7 @@ const Cases = () => {
   return (
     <section
       id="casos"
-      className="bg-background text-foreground py-20 lg:py-28"
+      className="bg-background text-foreground py-14 md:py-20 lg:py-28"
     >
       {/* SVG duotone filter: maps blacks to brand navy, whites to brand light */}
       <svg className="absolute w-0 h-0" aria-hidden="true">

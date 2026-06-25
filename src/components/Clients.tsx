@@ -69,7 +69,7 @@ const Clients = () => {
   return (
     <section
       id="clientes"
-      className="bg-[hsl(var(--surface-light))] text-[hsl(var(--surface-light-foreground))] py-20"
+      className="bg-[hsl(var(--surface-light))] text-[hsl(var(--surface-light-foreground))] py-14 md:py-20"
     >
       <div className="container">
         <div className="text-center max-w-2xl mx-auto">

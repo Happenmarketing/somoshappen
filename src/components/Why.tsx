@@ -2,7 +2,7 @@ import womanOk from "@/assets/woman-ok.webp";
 
 const Why = () => {
   return (
-    <section id="por-que" className="bg-background text-foreground py-24 lg:py-32">
+    <section id="por-que" className="bg-background text-foreground py-14 md:py-24 lg:py-32">
       <div className="container grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-5 order-2 lg:order-1">
           <div className="relative max-w-sm mx-auto">
