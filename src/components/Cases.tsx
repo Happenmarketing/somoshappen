@@ -98,7 +98,7 @@ const Cases = () => {
             PROYECTOS
           </span>
           <h2 className="mt-4 text-3xl lg:text-5xl font-semibold leading-tight">
-            Algunos de nuestros proyectos.
+            Algunos proyectos destacados.
           </h2>
         </div>
 
