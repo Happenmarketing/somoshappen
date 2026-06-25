@@ -164,6 +164,14 @@ const Contact = () => {
                   +59897490180
                 </span>
               </a>
+              <div className="flex items-center gap-3">
+                <span className="h-10 w-10 rounded-full bg-foreground/10 flex items-center justify-center">
+                  <MapPin className="h-4 w-4" />
+                </span>
+                <span className="text-sm font-medium">
+                  Puntas de Santiago, 1694
+                </span>
+              </div>
             </div>
 
             {/* Redes sociales */}
