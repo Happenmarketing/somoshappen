@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contacto" className="bg-background text-foreground py-24 lg:py-32 relative overflow-hidden">
+    <section id="contacto" className="bg-background text-foreground py-14 md:py-24 lg:py-32 relative overflow-hidden">
       <div className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-primary/30 blur-3xl" />
 
       <div className="container relative">
