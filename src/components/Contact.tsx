@@ -1,5 +1,5 @@
 import { useState, FormEvent } from "react";
-import { Linkedin, Instagram, CheckCircle, Loader2 } from "lucide-react";
+import { Linkedin, Instagram, CheckCircle, Loader2, MapPin } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 
