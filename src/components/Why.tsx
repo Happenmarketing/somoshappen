@@ -24,7 +24,7 @@ const Why = () => {
           </p>
           <div className="mt-4 max-w-xl border-l-2 border-primary pl-5 py-1">
             <p className="text-base lg:text-lg font-medium text-foreground/90 leading-relaxed">
-              Usamos la IA para ser más eficientes y enfocarnos en lo que ninguna herramienta reemplaza: entender tu organización y hacer que la comunicación funcione.
+              Usamos la IA para ser más eficientes y enfocarnos en lo que ninguna herramienta reemplaza: entender tu organización y hacer que la estrategia funcione.
             </p>
           </div>
           <h2 className="mt-6 text-balance text-4xl lg:text-6xl font-semibold leading-tight">
