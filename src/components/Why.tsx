@@ -18,13 +18,15 @@ const Why = () => {
           <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
             Porqué happen
           </span>
-          <p className="mt-4 max-w-xl text-base lg:text-lg text-foreground/70 leading-relaxed italic">
+          <p className="mt-4 max-w-xl text-base lg:text-lg text-foreground/60 leading-relaxed">
             En un contexto donde la IA cobra protagonismo, la comunicación va a
             necesitar ser más humana que nunca, y eso es lo que mejor hacemos.{"\u00a0"}
           </p>
-          <p className="mt-3 max-w-xl text-base lg:text-lg text-foreground/70 leading-relaxed italic">
-            Usamos la IA para ser más eficientes y enfocarnos en lo que ninguna herramienta reemplaza: entender tu organización y hacer que la comunicación funcione.
-          </p>
+          <div className="mt-4 max-w-xl border-l-2 border-primary pl-5 py-1">
+            <p className="text-base lg:text-lg font-medium text-foreground/90 leading-relaxed">
+              Usamos la IA para ser más eficientes y enfocarnos en lo que ninguna herramienta reemplaza: entender tu organización y hacer que la comunicación funcione.
+            </p>
+          </div>
           <h2 className="mt-6 text-balance text-4xl lg:text-6xl font-semibold leading-tight">
             Entramos, vemos lo que pasa y{" "}
             <span className="italic font-light text-primary">
