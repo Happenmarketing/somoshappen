@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="lg:col-span-7 animate-fade-up">
           <span className="inline-flex items-center gap-2 rounded-full bg-foreground/10 backdrop-blur px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-foreground/90">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            Comunicación con sentido
+            Cuando la comunicación pierde sentido, ninguna herramienta lo resuelve
           </span>
 
           <h1 className="mt-6 text-balance text-4xl sm:text-5xl lg:text-7xl font-semibold leading-[1.05] text-foreground">
