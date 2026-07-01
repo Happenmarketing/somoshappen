@@ -34,21 +34,19 @@ const Why = () => {
             </span>
           </h2>
           <p className="mt-8 max-w-xl text-lg text-foreground/70 leading-relaxed">
-            Visitamos, observamos y escuchamos a clientes y
-            colaboradores. Entendemos la cultura, las tensiones y lo que no se
-            dice en las reuniones. Pensamos la estrategia y la llevamos a la
-            acción, sin intermediarios y sin pérdida de sentido.
+            Visitamos, entrevistamos, observamos. Entendemos la cultura, las tensiones y lo que no se dice en las reuniones. Pensamos la estrategia y la llevamos a la acción. Sin intermediarios, sin pérdida de sentido.
           </p>
 
-          <div className="mt-10 grid sm:grid-cols-3 gap-6">
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { n: "+15", t: "Años de experiencia" },
-              { n: "Boutique", t: "Equipo comprometido y cercano" },
-              { n: "In-house", t: "Equipo multidisciplinario para brindar un servicio integral" },
+              { title: "Estamos adentro", desc: "Visitamos, entrevistamos, observamos. Entendemos la cultura, las tensiones y lo que no se dice en las reuniones." },
+              { title: "Estrategia + ejecución", desc: "Pensamos la estrategia y la llevamos a la acción. Sin intermediarios, sin pérdida de sentido." },
+              { title: "Con las herramientas que sirven", desc: "Usamos IA y todo lo que funcione, sin perder el criterio humano." },
+              { title: "Boutique", desc: "Un equipo chico y comprometido, con más de 15 años trabajando de cerca con cada cliente." },
             ].map((s) => (
-              <div key={s.n} className="border-l-2 border-primary pl-4">
-                <div className="text-4xl font-semibold">{s.n}</div>
-                <div className="mt-1 text-sm text-foreground/60">{s.t}</div>
+              <div key={s.title} className="border-l-2 border-primary pl-4">
+                <div className="text-lg font-semibold leading-snug">{s.title}</div>
+                <div className="mt-2 text-sm text-foreground/60 leading-relaxed">{s.desc}</div>
               </div>
             ))}
           </div>
