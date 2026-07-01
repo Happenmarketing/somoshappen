@@ -33,10 +33,6 @@ const Why = () => {
               lo resolvemos con vos.
             </span>
           </h2>
-          <p className="mt-8 max-w-xl text-lg text-foreground/70 leading-relaxed">
-            Visitamos, entrevistamos, observamos. Entendemos la cultura, las tensiones y lo que no se dice en las reuniones. Pensamos la estrategia y la llevamos a la acción. Sin intermediarios, sin pérdida de sentido.
-          </p>
-
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: "Estamos adentro", desc: "Visitamos, entrevistamos, observamos. Entendemos la cultura, las tensiones y lo que no se dice en las reuniones." },
