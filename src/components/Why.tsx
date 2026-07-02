@@ -38,7 +38,7 @@ const Why = () => {
               { title: "Estamos adentro", desc: "Visitamos, entrevistamos, observamos. Entendemos la cultura, las tensiones y lo que no se dice en las reuniones." },
               { title: "Estrategia + ejecución", desc: "Pensamos la estrategia y la llevamos a la acción. Sin intermediarios, sin pérdida de sentido." },
               { title: "Con las herramientas que sirven", desc: "Usamos IA y las herramientas que funcionan, sin perder el criterio humano." },
-              { title: "Boutique", desc: "Un equipo chico y comprometido, con más de 15 años trabajando de cerca con cada cliente." },
+              { title: "Agencia boutique", desc: "Un equipo chico y comprometido, con más de 15 años trabajando de cerca con cada cliente." },
             ].map((s) => (
               <div key={s.title} className="border-l-2 border-primary pl-4">
                 <div className="text-lg font-semibold leading-snug">{s.title}</div>
