@@ -51,8 +51,8 @@ const Hero = () => {
 
         <div className="lg:col-span-5 relative">
           <div className="relative mx-auto max-w-md">
-            {/* Spinning badge — centered on the blue / image boundary */}
-            <div className="absolute -top-10 left-0 z-20 h-32 w-32 animate-spin-slow -translate-x-1/2">
+            {/* Spinning badge */}
+            <div className="absolute -top-10 -left-8 z-20 h-32 w-32 animate-spin-slow">
               <img
                 src={happenIconComplete.url}
                 alt="happen"
