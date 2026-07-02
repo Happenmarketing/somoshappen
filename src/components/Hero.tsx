@@ -1,5 +1,5 @@
 import womanSurprise from "@/assets/woman-surprise.webp";
-import happenIcon from "@/assets/happen-icon-white.png";
+import happenIconComplete from "@/assets/happen-icon-complete.png.asset.json";
 
 const Hero = () => {
   return (
@@ -53,26 +53,11 @@ const Hero = () => {
           <div className="relative mx-auto max-w-md">
             {/* Spinning badge */}
             <div className="absolute -top-6 -left-6 z-20 h-28 w-28 animate-spin-slow">
-              <svg viewBox="0 0 100 100" className="h-full w-full">
-                <defs>
-                  <path
-                    id="circle"
-                    d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"
-                  />
-                </defs>
-                <text fontSize="9" fontWeight="600" fill="hsl(var(--foreground))" letterSpacing="2">
-                  <textPath href="#circle">
-                    happen · happen · happen · happen ·
-                  </textPath>
-                </text>
-              </svg>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <img
-                  src={happenIcon}
-                  alt="happen"
-                  className="h-10 w-10 object-contain"
-                />
-              </div>
+              <img
+                src={happenIconComplete.url}
+                alt="happen"
+                className="h-full w-full object-contain"
+              />
             </div>
 
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-soft">
