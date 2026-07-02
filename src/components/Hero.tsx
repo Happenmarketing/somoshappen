@@ -51,7 +51,7 @@ const Hero = () => {
 
         <div className="lg:col-span-5 relative">
           <div className="relative mx-auto max-w-md">
-            <div className="absolute -top-12 -left-12 z-20 h-40 w-40 animate-spin-slow">
+            <div className="absolute -top-14 -left-14 z-20 h-48 w-48 animate-spin-slow">
               <img
                 src={happenIconComplete.url}
                 alt="happen"
