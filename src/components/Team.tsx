@@ -1,19 +1,17 @@
 import { Linkedin } from "lucide-react";
-import soledadAsset from "@/assets/soledad.jpg.asset.json";
-import patriciaAsset from "@/assets/patricia.jpg.asset.json";
 
 const team = [
   {
     name: "Soledad Cibils",
     role: "Diseño & Estrategia",
-    photo: soledadAsset.url,
+    photo: "/team/soledad.jpg",
     linkedin: "https://uy.linkedin.com/in/soledadcibils",
     bio: "Con más de 15 años diseñando para marcas como Bosch&Cia, Groupon y Punta del Este Operadora, Soledad se especializa en crear identidades visuales que cuentan historias y generan conexión. Su trabajo combina sensibilidad estética con pensamiento estratégico, logrando que cada pieza de comunicación sea memorable y alineada con los objetivos del negocio. Curiosa por naturaleza y detallista por convicción, está convencida de que el buen diseño no solo se ve: se siente y funciona.",
   },
   {
     name: "Patricia Apoj",
     role: "Estrategia & Comunicación",
-    photo: patriciaAsset.url,
+    photo: "/team/patricia.jpg",
     linkedin: "https://www.linkedin.com/in/patriciaapoj/?skipRedirect=true",
     bio: "Licenciada en Marketing por la Universidad de la República y Máster en Innovación en Negocios por la Universitat de Barcelona, Patricia cuenta con una sólida trayectoria liderando áreas de marketing en Groupon, Life Cinemas y Montecable. Su trabajo se centra en descubrir oportunidades estratégicas y construir mensajes claros que conecten de verdad con las personas. Madre de dos, viajera curiosa y analista de contextos, aplica esa misma capacidad de observación para potenciar la identidad de cada marca y priorizar lo que realmente impulsa su crecimiento.",
   },
