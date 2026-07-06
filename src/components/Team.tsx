@@ -55,7 +55,7 @@ const Team = () => {
                     alt={member.name}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover rounded-full duotone"
+                    className="w-full h-full object-cover rounded-full"
                   />
                 </div>
 
