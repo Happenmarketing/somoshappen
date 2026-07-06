@@ -27,13 +27,10 @@ const Team = () => {
             Quiénes somos
           </span>
           <h2 className="mt-4 text-balance text-4xl lg:text-6xl font-semibold leading-[1.05] max-w-3xl mx-auto">
-            Un equipo de profesionales con más de 15 años{" "}
-            <span className="italic font-light text-primary">
-              haciendo que las cosas pasen.
-            </span>
+            Somos Pata y Sole, directoras de Happen.
           </h2>
           <p className="mt-5 max-w-xl mx-auto text-lg text-[hsl(var(--surface-light-foreground))]/70 leading-relaxed">
-            Estrategia y diseño, trabajando codo a codo con cada marca.
+            Lideramos cada proyecto de principio a fin, con un equipo profesional que hace que las cosas sucedan.
           </p>
         </div>
 
