@@ -1,4 +1,5 @@
-import womanBinoc from "@/assets/woman-binoculars.webp";
+import womanBinocAsset from "@/assets/happen-metodologia-clara.png.asset.json";
+const womanBinoc = womanBinocAsset.url;
 
 const steps = [
   {
