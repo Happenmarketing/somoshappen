@@ -52,6 +52,16 @@ const Team = () => {
                     decoding="async"
                     className="w-full h-full object-cover rounded-full"
                   />
+                  {/* LinkedIn */}
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute bottom-0 right-0 translate-x-1 translate-y-1 inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground shadow-md hover:scale-110 transition-transform"
+                    aria-label={`LinkedIn de ${member.name}`}
+                  >
+                    <Linkedin className="h-3.5 w-3.5" />
+                  </a>
                 </div>
 
                 {/* Nombre y rol */}
