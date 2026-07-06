@@ -77,16 +77,6 @@ const Team = () => {
                   {member.bio}
                 </p>
 
-                {/* LinkedIn */}
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 rounded-full border border-primary/30 px-5 py-2 text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  <Linkedin className="h-4 w-4" />
-                  LinkedIn
-                </a>
               </div>
             </article>
           ))}
