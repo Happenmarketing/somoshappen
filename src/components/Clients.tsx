@@ -84,8 +84,9 @@ const Clients = () => {
 
       <div className="mt-10 space-y-3 relative">
         {/* Fade edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-[hsl(var(--surface-light))] to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-[hsl(var(--surface-light))] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-10 md:w-24 z-10 bg-gradient-to-r from-[hsl(var(--surface-light))] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-10 md:w-24 z-10 bg-gradient-to-l from-[hsl(var(--surface-light))] to-transparent" />
+
 
         <Row items={row1} />
         <Row items={row2} reverse />
