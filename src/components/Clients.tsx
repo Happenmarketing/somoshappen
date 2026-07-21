@@ -41,8 +41,7 @@ const logos = [
 const Row = ({ items, reverse = false }: { items: typeof logos; reverse?: boolean }) => (
   <div className="overflow-hidden group">
     <div
-      className="flex w-max animate-marquee gap-6 group-hover:[animation-play-state:paused]"
-      style={{ animationDirection: reverse ? "reverse" : "normal" }}
+      className={`flex w-max gap-6 group-hover:[animation-play-state:paused] ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}
     >
       {[...items, ...items].map((logo, i) => (
         <div
