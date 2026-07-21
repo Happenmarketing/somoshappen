@@ -18,7 +18,7 @@ const Hero = () => {
             Cuando la comunicación pierde sentido, ninguna herramienta lo resuelve
           </span>
 
-          <h1 className="mt-6 text-balance text-4xl sm:text-5xl lg:text-7xl font-semibold leading-[1.05] text-foreground">
+          <h1 className="mt-6 text-balance text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.05] text-foreground">
             Lo que mejor hacemos es{" "}
             <span className="italic font-light text-primary">
               entenderte.
