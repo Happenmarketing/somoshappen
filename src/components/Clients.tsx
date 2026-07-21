@@ -41,18 +41,18 @@ const logos = [
 const Row = ({ items, reverse = false }: { items: typeof logos; reverse?: boolean }) => (
   <div className="overflow-hidden group">
     <div
-      className={`flex w-max gap-3 lg:gap-3 lg:group-hover:[animation-play-state:paused] ${reverse ? "lg:animate-marquee-reverse" : "lg:animate-marquee"}`}
+      className={`flex w-max gap-1 lg:gap-3 lg:group-hover:[animation-play-state:paused] ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}
     >
       {[...items, ...items].map((logo, i) => (
         <div
           key={`${logo.alt}-${i}`}
-          className="shrink-0 h-36 w-64 md:h-32 md:w-56 flex items-center justify-center"
+          className="shrink-0 h-36 w-64 lg:h-32 lg:w-56 flex items-center justify-center"
         >
           <img
             src={logo.src}
             alt={logo.alt}
             loading="lazy"
-            className="max-h-full max-w-full object-contain opacity-100 md:opacity-80 md:hover:opacity-100 transition-opacity duration-300"
+            className="max-h-full max-w-full object-contain opacity-100 lg:opacity-80 lg:hover:opacity-100 transition-opacity duration-300"
           />
         </div>
       ))}
