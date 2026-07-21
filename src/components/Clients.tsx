@@ -47,13 +47,13 @@ const Row = ({ items, reverse = false }: { items: typeof logos; reverse?: boolea
       {[...items, ...items].map((logo, i) => (
         <div
           key={`${logo.alt}-${i}`}
-          className="shrink-0 h-24 w-40 md:h-32 md:w-56 flex items-center justify-center"
+          className="shrink-0 h-20 w-32 md:h-32 md:w-56 flex items-center justify-center"
         >
           <img
             src={logo.src}
             alt={logo.alt}
             loading="lazy"
-            className="h-full w-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+            className="max-h-full max-w-full object-contain opacity-100 md:opacity-80 md:hover:opacity-100 transition-opacity duration-300"
           />
         </div>
       ))}
@@ -84,8 +84,9 @@ const Clients = () => {
 
       <div className="mt-10 space-y-3 relative">
         {/* Fade edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-[hsl(var(--surface-light))] to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-[hsl(var(--surface-light))] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-10 md:w-24 z-10 bg-gradient-to-r from-[hsl(var(--surface-light))] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-10 md:w-24 z-10 bg-gradient-to-l from-[hsl(var(--surface-light))] to-transparent" />
+
 
         <Row items={row1} />
         <Row items={row2} reverse />
