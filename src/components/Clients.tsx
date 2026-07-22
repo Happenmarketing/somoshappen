@@ -49,7 +49,7 @@ const Row = ({
 }) => (
   <div className={`overflow-hidden group ${className}`}>
     <div
-      className={`flex w-max gap-4 lg:gap-4 lg:group-hover:[animation-play-state:paused] ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}
+      className={`flex w-max gap-2 lg:gap-4 lg:group-hover:[animation-play-state:paused] ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}
     >
       {[...items, ...items].map((logo, i) => (
         <div
