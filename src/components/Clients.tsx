@@ -54,7 +54,7 @@ const Row = ({
       {[...items, ...items].map((logo, i) => (
         <div
           key={`${logo.alt}-${i}`}
-          className="shrink-0 h-16 lg:h-40 w-auto max-w-[180px] lg:max-w-none lg:w-60 flex items-center justify-center"
+          className="shrink-0 h-20 lg:h-40 w-auto max-w-[200px] lg:max-w-none lg:w-60 flex items-center justify-center"
         >
           <img
             src={logo.src}
