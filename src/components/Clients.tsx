@@ -49,12 +49,12 @@ const Row = ({
 }) => (
   <div className={`overflow-hidden group ${className}`}>
     <div
-      className={`flex w-max gap-0 lg:gap-4 lg:group-hover:[animation-play-state:paused] ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}
+      className={`flex w-max gap-2 lg:gap-4 lg:group-hover:[animation-play-state:paused] ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}
     >
       {[...items, ...items].map((logo, i) => (
         <div
           key={`${logo.alt}-${i}`}
-          className="shrink-0 h-20 lg:h-40 w-auto lg:w-60 -mx-6 lg:mx-0 lg:px-0 flex items-center justify-center"
+          className="shrink-0 h-16 lg:h-40 w-auto lg:w-60 flex items-center justify-center"
         >
           <img
             src={logo.src}
