@@ -1,5 +1,5 @@
 import womanSurprise from "@/assets/woman-surprise.webp";
-import happenIconComplete from "@/assets/happen-icon-complete.png.asset.json";
+import happenIconComplete from "@/assets/happen-icon-complete.webp";
 
 const Hero = () => {
   return (
