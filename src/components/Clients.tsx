@@ -38,15 +38,23 @@ const logos = [
   { src: focap, alt: "Focap" },
 ];
 
-const Row = ({ items, reverse = false }: { items: typeof logos; reverse?: boolean }) => (
-  <div className="overflow-hidden group">
+const Row = ({
+  items,
+  reverse = false,
+  className = "",
+}: {
+  items: typeof logos;
+  reverse?: boolean;
+  className?: string;
+}) => (
+  <div className={`overflow-hidden group ${className}`}>
     <div
       className={`flex w-max gap-0 lg:gap-4 lg:group-hover:[animation-play-state:paused] ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}
     >
       {[...items, ...items].map((logo, i) => (
         <div
           key={`${logo.alt}-${i}`}
-          className="shrink-0 h-20 lg:h-40 w-auto lg:w-60 -mx-2 lg:mx-0 lg:px-0 flex items-center justify-center"
+          className="shrink-0 h-20 lg:h-40 w-auto lg:w-60 -mx-3 lg:mx-0 lg:px-0 flex items-center justify-center"
         >
           <img
             src={logo.src}
@@ -86,9 +94,16 @@ const Clients = () => {
         <div className="pointer-events-none absolute inset-y-0 left-0 w-10 md:w-24 z-10 bg-gradient-to-r from-[hsl(var(--surface-light))] to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-10 md:w-24 z-10 bg-gradient-to-l from-[hsl(var(--surface-light))] to-transparent" />
 
+        {/* Mobile: single row */}
+        <div className="lg:hidden">
+          <Row items={logos} />
+        </div>
 
-        <Row items={row1} />
-        <Row items={row2} reverse />
+        {/* Desktop: two rows */}
+        <div className="hidden lg:block space-y-3">
+          <Row items={row1} />
+          <Row items={row2} reverse />
+        </div>
       </div>
     </section>
   );
