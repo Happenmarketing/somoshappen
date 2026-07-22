@@ -1,5 +1,4 @@
-import womanBinocAsset from "@/assets/happen-metodologia-clara.png.asset.json";
-const womanBinoc = womanBinocAsset.url;
+import womanBinoc from "@/assets/happen-metodologia-clara.webp";
 
 const steps = [
   {
