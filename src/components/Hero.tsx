@@ -1,5 +1,5 @@
 import womanSurprise from "@/assets/woman-surprise.webp";
-import happenIconComplete from "@/assets/happen-icon-complete.png.asset.json";
+import happenIconComplete from "@/assets/happen-icon-complete.webp";
 
 const Hero = () => {
   return (
@@ -53,7 +53,7 @@ const Hero = () => {
           <div className="relative mx-auto max-w-md">
             <div className="absolute -top-14 -left-14 z-20 h-48 w-48 animate-spin-slow">
               <img
-                src={happenIconComplete.url}
+                src={happenIconComplete}
                 alt="happen"
                 className="h-full w-full object-contain"
               />
