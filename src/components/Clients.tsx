@@ -46,13 +46,13 @@ const Row = ({ items, reverse = false }: { items: typeof logos; reverse?: boolea
       {[...items, ...items].map((logo, i) => (
         <div
           key={`${logo.alt}-${i}`}
-          className="shrink-0 h-40 w-44 lg:h-36 lg:w-60 flex items-center justify-center"
+          className="shrink-0 h-40 lg:h-36 w-auto lg:w-60 px-1 lg:px-0 flex items-center justify-center"
         >
           <img
             src={logo.src}
             alt={logo.alt}
             loading="lazy"
-            className="max-h-full max-w-full object-contain opacity-100 lg:opacity-80 lg:hover:opacity-100 transition-opacity duration-300"
+            className="h-full w-auto max-w-none object-contain opacity-100 lg:opacity-80 lg:hover:opacity-100 transition-opacity duration-300"
           />
         </div>
       ))}
