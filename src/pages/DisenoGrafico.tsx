@@ -19,14 +19,19 @@ type Proyecto = {
   titulo: string;
   categoria: string;
   descripcion: string;
-  // TODO: reemplazar por imagen real importada desde @/assets/portfolio/...
   placeholderBg: string;
   span: string;
-  /** Placeholder de galería — reemplazar por importaciones reales de @/assets/portfolio/... */
   galeria: { src: string; alt: string; bg: string }[];
 };
 
-// PLACEHOLDER portfolio — agrupado por CATEGORÍA DE SERVICIO (se reemplaza con material real).
+// Genera galería a partir de imágenes en /public/portfolio/<folder>/01..NN.webp
+const galeriaFrom = (folder: string, count: number, alt: string) =>
+  Array.from({ length: count }, (_, i) => ({
+    src: `/portfolio/${folder}/${String(i + 1).padStart(2, "0")}.webp`,
+    alt: `${alt} — ${i + 1}`,
+    bg: "bg-primary/20",
+  }));
+
 const proyectos: Proyecto[] = [
   {
     titulo: "Branding",
@@ -34,44 +39,23 @@ const proyectos: Proyecto[] = [
     descripcion: "Sistemas visuales completos: logotipo, paleta, tipografía, guidelines y aplicaciones.",
     placeholderBg: "from-primary/40 to-primary/10",
     span: "md:col-span-8 md:row-span-2",
-    galeria: [
-      { src: "", alt: "Branding — Identidad principal", bg: "bg-primary/30" },
-      { src: "", alt: "Branding — Aplicaciones", bg: "bg-secondary/40" },
-      { src: "", alt: "Branding — Guidelines", bg: "bg-primary/20" },
-    ],
+    galeria: galeriaFrom("branding", 28, "Branding"),
   },
   {
-    titulo: "Packaging",
-    categoria: "Diseño de envases",
-    descripcion: "Packaging que destaca en góndola y comunica la propuesta de valor de la marca.",
-    placeholderBg: "from-secondary/60 to-primary/20",
-    span: "md:col-span-4 md:row-span-1",
-    galeria: [
-      { src: "", alt: "Packaging — Envase", bg: "bg-secondary/50" },
-      { src: "", alt: "Packaging — Mockup", bg: "bg-primary/30" },
-    ],
-  },
-  {
-    titulo: "Redes sociales",
-    categoria: "Contenido digital",
-    descripcion: "Sistemas visuales y piezas mensuales para mantener la marca viva y coherente en redes.",
-    placeholderBg: "from-primary/30 to-secondary/40",
-    span: "md:col-span-4 md:row-span-1",
-    galeria: [
-      { src: "", alt: "Redes — Feed", bg: "bg-primary/25" },
-      { src: "", alt: "Redes — Pieza destacada", bg: "bg-secondary/30" },
-    ],
-  },
-  {
-    titulo: "Campañas",
+    titulo: "Campañas 360",
     categoria: "Campañas gráficas",
     descripcion: "Concepto creativo y adaptaciones para diferentes soportes y momentos de comunicación.",
     placeholderBg: "from-primary/50 to-primary/10",
-    span: "md:col-span-6 md:row-span-1",
-    galeria: [
-      { src: "", alt: "Campañas — Key visual", bg: "bg-primary/40" },
-      { src: "", alt: "Campañas — Adaptaciones", bg: "bg-secondary/40" },
-    ],
+    span: "md:col-span-4 md:row-span-1",
+    galeria: galeriaFrom("campanas-360", 26, "Campaña"),
+  },
+  {
+    titulo: "Redes y assets digitales",
+    categoria: "Contenido digital",
+    descripcion: "Sistemas visuales y piezas para redes, mailings y contenido digital.",
+    placeholderBg: "from-primary/30 to-secondary/40",
+    span: "md:col-span-4 md:row-span-1",
+    galeria: galeriaFrom("assets-digitales", 29, "Asset digital"),
   },
   {
     titulo: "Merchandising",
@@ -79,43 +63,31 @@ const proyectos: Proyecto[] = [
     descripcion: "Objetos, kits y regalos con identidad de marca para clientes, equipos y eventos.",
     placeholderBg: "from-secondary/40 to-primary/30",
     span: "md:col-span-6 md:row-span-1",
-    galeria: [
-      { src: "", alt: "Merchandising — Kit", bg: "bg-secondary/35" },
-      { src: "", alt: "Merchandising — Regalo", bg: "bg-primary/30" },
-    ],
+    galeria: galeriaFrom("merchandising", 32, "Merchandising"),
   },
   {
     titulo: "Punto de venta",
     categoria: "Retail y activaciones",
     descripcion: "Piezas gráficas para vidrieras, displays, activaciones y materiales de punto de venta.",
     placeholderBg: "from-primary/20 to-secondary/50",
-    span: "md:col-span-4 md:row-span-1",
-    galeria: [
-      { src: "", alt: "PDV — Display", bg: "bg-primary/25" },
-      { src: "", alt: "PDV — Vidriera", bg: "bg-secondary/40" },
-    ],
+    span: "md:col-span-6 md:row-span-1",
+    galeria: galeriaFrom("punto-de-venta", 10, "Punto de venta"),
   },
   {
-    titulo: "Editorial",
-    categoria: "Publicaciones e institucionales",
-    descripcion: "Memorias, catálogos, revistas y publicaciones con diagramación y sistema tipográfico.",
+    titulo: "Brochures y papelería",
+    categoria: "Editorial e institucional",
+    descripcion: "Brochures, memorias, catálogos y papelería con diagramación y sistema tipográfico.",
     placeholderBg: "from-primary/40 to-primary/20",
-    span: "md:col-span-4 md:row-span-1",
-    galeria: [
-      { src: "", alt: "Editorial — Portada", bg: "bg-primary/35" },
-      { src: "", alt: "Editorial — Doble página", bg: "bg-secondary/40" },
-    ],
+    span: "md:col-span-8 md:row-span-1",
+    galeria: galeriaFrom("brochures-papeleria", 12, "Brochure"),
   },
   {
-    titulo: "Presentaciones",
-    categoria: "PPT y keynotes",
-    descripcion: "Presentaciones de alto impacto para directorios, pitches, inversores y ventas.",
+    titulo: "Materiales gráficos",
+    categoria: "Piezas puntuales",
+    descripcion: "Piezas gráficas a medida para campañas, eventos y necesidades específicas.",
     placeholderBg: "from-primary/30 to-secondary/40",
     span: "md:col-span-4 md:row-span-1",
-    galeria: [
-      { src: "", alt: "Presentaciones — Slide principal", bg: "bg-primary/30" },
-      { src: "", alt: "Presentaciones — Slide de datos", bg: "bg-secondary/40" },
-    ],
+    galeria: galeriaFrom("materiales-graficos", 3, "Material gráfico"),
   },
 ];
 
