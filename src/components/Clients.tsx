@@ -96,7 +96,7 @@ const Clients = () => {
 
         {/* Mobile: single row */}
         <div className="lg:hidden">
-          <Row items={logos} />
+          <Row items={logos} className="[&>div]:gap-6" />
         </div>
 
         {/* Desktop: two rows */}
