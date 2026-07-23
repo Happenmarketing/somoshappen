@@ -297,12 +297,20 @@ const DisenoGrafico = () => {
                 aria-label={`Ver galería de ${p.titulo}`}
                 className={`group relative overflow-hidden rounded-2xl text-left aspect-[4/3] md:aspect-auto bg-gradient-to-br ${p.placeholderBg} ${p.span} focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
               >
-                {/* Placeholder — reemplazar por <img /> cuando llegue el material */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-foreground/30 text-xs uppercase tracking-widest">
-                    Imagen del proyecto
-                  </span>
-                </div>
+                {p.galeria[0]?.src ? (
+                  <img
+                    src={p.galeria[0].src}
+                    alt={p.galeria[0].alt}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-foreground/30 text-xs uppercase tracking-widest">
+                      Imagen del proyecto
+                    </span>
+                  </div>
+                )}
 
                 {/* Hint de galería */}
                 <div className="absolute top-4 right-4 rounded-full bg-black/40 backdrop-blur text-white px-3 py-1 text-[11px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
