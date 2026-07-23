@@ -26,80 +26,79 @@ type Proyecto = {
   galeria: { src: string; alt: string; bg: string }[];
 };
 
-// PLACEHOLDER portfolio — se reemplaza cuando el cliente pase el material real.
+// PLACEHOLDER portfolio — agrupado por CLIENTE/MARCA (se reemplaza con material real).
 const proyectos: Proyecto[] = [
   {
-    titulo: "Sistema de identidad",
-    categoria: "Branding",
-    descripcion: "Construcción de identidad visual: logotipo, sistema, guidelines y aplicaciones.",
+    titulo: "GAMA Italy",
+    categoria: "Branding + Campañas",
+    descripcion: "Identidad, campañas y producción de contenido para la marca de belleza profesional.",
     placeholderBg: "from-primary/40 to-primary/10",
     span: "md:col-span-8 md:row-span-2",
     galeria: [
-      { src: "", alt: "Identidad principal", bg: "bg-primary/30" },
-      { src: "", alt: "Aplicaciones", bg: "bg-secondary/40" },
-      { src: "", alt: "Sistema visual", bg: "bg-primary/20" },
+      { src: "", alt: "GAMA Italy — Identidad", bg: "bg-primary/30" },
+      { src: "", alt: "GAMA Italy — Campaña", bg: "bg-secondary/40" },
+      { src: "", alt: "GAMA Italy — Redes", bg: "bg-primary/20" },
     ],
   },
   {
-    titulo: "Packaging premium",
-    categoria: "Packaging",
-    descripcion: "Diseño de línea completa: estructura, gráfica y experiencia de unboxing.",
+    titulo: "Denucio",
+    categoria: "Identidad + Packaging",
+    descripcion: "Sistema de marca y packaging con foco en experiencia y consistencia visual.",
     placeholderBg: "from-secondary/60 to-primary/20",
     span: "md:col-span-4 md:row-span-1",
     galeria: [
-      { src: "", alt: "Packaging principal", bg: "bg-secondary/50" },
-      { src: "", alt: "Detalle línea", bg: "bg-primary/30" },
+      { src: "", alt: "Denucio — Marca", bg: "bg-secondary/50" },
+      { src: "", alt: "Denucio — Packaging", bg: "bg-primary/30" },
     ],
   },
   {
-    titulo: "Producción de contenido",
-    categoria: "Redes sociales",
-    descripcion: "Sistema visual y producción mensual de contenido para redes con consistencia de marca.",
+    titulo: "Devoto",
+    categoria: "Retail + PDV",
+    descripcion: "Piezas gráficas para punto de venta, vidrieras y campañas estacionales.",
     placeholderBg: "from-primary/30 to-secondary/40",
     span: "md:col-span-4 md:row-span-1",
     galeria: [
-      { src: "", alt: "Feed de redes", bg: "bg-primary/25" },
-      { src: "", alt: "Pieza destacada", bg: "bg-secondary/30" },
+      { src: "", alt: "Devoto — Vidriera", bg: "bg-primary/25" },
+      { src: "", alt: "Devoto — Campaña", bg: "bg-secondary/30" },
     ],
   },
   {
-    titulo: "Campaña integral",
-    categoria: "Campaña gráfica",
-    descripcion: "Concepto creativo y adaptaciones para vía pública, prensa, digital y punto de venta.",
+    titulo: "FOCAP",
+    categoria: "Institucional",
+    descripcion: "Comunicación institucional, memoria anual y material corporativo.",
     placeholderBg: "from-primary/50 to-primary/10",
     span: "md:col-span-6 md:row-span-1",
     galeria: [
-      { src: "", alt: "Vía pública", bg: "bg-primary/40" },
-      { src: "", alt: "Adaptación digital", bg: "bg-secondary/40" },
-      { src: "", alt: "Punto de venta", bg: "bg-primary/20" },
+      { src: "", alt: "FOCAP — Memoria", bg: "bg-primary/40" },
+      { src: "", alt: "FOCAP — Papelería", bg: "bg-secondary/40" },
     ],
   },
   {
-    titulo: "Merchandising corporativo",
-    categoria: "Merchandising",
-    descripcion: "Diseño de kits, regalos corporativos y productos con identidad de marca.",
+    titulo: "Cliente 5",
+    categoria: "Redes sociales",
+    descripcion: "Sistema visual y producción mensual de contenido para redes.",
     placeholderBg: "from-secondary/40 to-primary/30",
     span: "md:col-span-6 md:row-span-1",
     galeria: [
-      { src: "", alt: "Kit corporativo", bg: "bg-secondary/35" },
-      { src: "", alt: "Regalo institucional", bg: "bg-primary/30" },
+      { src: "", alt: "Feed de redes", bg: "bg-secondary/35" },
+      { src: "", alt: "Pieza destacada", bg: "bg-primary/30" },
     ],
   },
   {
-    titulo: "Punto de venta",
-    categoria: "PDV & retail",
-    descripcion: "Diseño de gráfica para local, señalética, vidrieras y material promocional.",
+    titulo: "Cliente 6",
+    categoria: "Merchandising",
+    descripcion: "Kits corporativos y regalos con identidad de marca.",
     placeholderBg: "from-primary/20 to-secondary/50",
     span: "md:col-span-4 md:row-span-1",
     galeria: [
-      { src: "", alt: "Vidriera", bg: "bg-primary/25" },
-      { src: "", alt: "Señalética", bg: "bg-secondary/40" },
+      { src: "", alt: "Kit", bg: "bg-primary/25" },
+      { src: "", alt: "Regalo institucional", bg: "bg-secondary/40" },
     ],
   },
   {
-    titulo: "Memoria institucional",
+    titulo: "Cliente 7",
     categoria: "Editorial",
-    descripcion: "Diagramación de memoria anual: portada, sistema tipográfico e infografías.",
+    descripcion: "Diagramación editorial y sistema tipográfico.",
     placeholderBg: "from-primary/40 to-primary/20",
     span: "md:col-span-4 md:row-span-1",
     galeria: [
@@ -108,9 +107,9 @@ const proyectos: Proyecto[] = [
     ],
   },
   {
-    titulo: "Presentación ejecutiva",
+    titulo: "Cliente 8",
     categoria: "Presentaciones",
-    descripcion: "Diseño de PPT de alto impacto para directorio, inversores y equipos comerciales.",
+    descripcion: "PPT de alto impacto para directorio e inversores.",
     placeholderBg: "from-primary/30 to-secondary/40",
     span: "md:col-span-4 md:row-span-1",
     galeria: [
@@ -118,6 +117,7 @@ const proyectos: Proyecto[] = [
       { src: "", alt: "Slide de datos", bg: "bg-secondary/40" },
     ],
   },
+
 ];
 
 
