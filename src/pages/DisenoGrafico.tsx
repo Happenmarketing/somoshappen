@@ -22,6 +22,8 @@ type Proyecto = {
   // TODO: reemplazar por imagen real importada desde @/assets/portfolio/...
   placeholderBg: string;
   span: string;
+  /** Placeholder de galería — reemplazar por importaciones reales de @/assets/portfolio/... */
+  galeria: { src: string; alt: string; bg: string }[];
 };
 
 // PLACEHOLDER portfolio — se reemplaza cuando el cliente pase el material real.
@@ -32,6 +34,11 @@ const proyectos: Proyecto[] = [
     descripcion: "Rebranding integral: logotipo, sistema visual y aplicaciones.",
     placeholderBg: "from-primary/40 to-primary/10",
     span: "md:col-span-8 md:row-span-2",
+    galeria: [
+      { src: "", alt: "Vista principal", bg: "bg-primary/30" },
+      { src: "", alt: "Aplicación papelería", bg: "bg-secondary/40" },
+      { src: "", alt: "Sistema visual", bg: "bg-primary/20" },
+    ],
   },
   {
     titulo: "Proyecto Dos",
@@ -39,6 +46,10 @@ const proyectos: Proyecto[] = [
     descripcion: "Diseño de línea completa de packaging premium.",
     placeholderBg: "from-secondary/60 to-primary/20",
     span: "md:col-span-4 md:row-span-1",
+    galeria: [
+      { src: "", alt: "Packaging principal", bg: "bg-secondary/50" },
+      { src: "", alt: "Detalle packaging", bg: "bg-primary/30" },
+    ],
   },
   {
     titulo: "Proyecto Tres",
@@ -46,6 +57,10 @@ const proyectos: Proyecto[] = [
     descripcion: "Memoria anual: diagramación, portada y sistema de infografías.",
     placeholderBg: "from-primary/30 to-secondary/40",
     span: "md:col-span-4 md:row-span-1",
+    galeria: [
+      { src: "", alt: "Portada editorial", bg: "bg-primary/25" },
+      { src: "", alt: "Doble página", bg: "bg-secondary/30" },
+    ],
   },
   {
     titulo: "Proyecto Cuatro",
@@ -53,6 +68,10 @@ const proyectos: Proyecto[] = [
     descripcion: "Concepto, arte y adaptaciones para vía pública, prensa y digital.",
     placeholderBg: "from-primary/50 to-primary/10",
     span: "md:col-span-6 md:row-span-1",
+    galeria: [
+      { src: "", alt: "Campaña vía pública", bg: "bg-primary/40" },
+      { src: "", alt: "Adaptación digital", bg: "bg-secondary/40" },
+    ],
   },
   {
     titulo: "Proyecto Cinco",
@@ -60,6 +79,10 @@ const proyectos: Proyecto[] = [
     descripcion: "Sistema visual para contenido en redes con alta consistencia.",
     placeholderBg: "from-secondary/40 to-primary/30",
     span: "md:col-span-6 md:row-span-1",
+    galeria: [
+      { src: "", alt: "Feed redes", bg: "bg-secondary/35" },
+      { src: "", alt: "Pieza individual", bg: "bg-primary/30" },
+    ],
   },
   {
     titulo: "Proyecto Seis",
@@ -67,6 +90,10 @@ const proyectos: Proyecto[] = [
     descripcion: "Presentación institucional de alto impacto para directorio.",
     placeholderBg: "from-primary/20 to-secondary/50",
     span: "md:col-span-4 md:row-span-1",
+    galeria: [
+      { src: "", alt: "Slide principal", bg: "bg-primary/25" },
+      { src: "", alt: "Slide secundario", bg: "bg-secondary/40" },
+    ],
   },
   {
     titulo: "Proyecto Siete",
@@ -74,6 +101,11 @@ const proyectos: Proyecto[] = [
     descripcion: "Papelería, señalética y kit de bienvenida para nuevos colaboradores.",
     placeholderBg: "from-primary/40 to-primary/20",
     span: "md:col-span-8 md:row-span-1",
+    galeria: [
+      { src: "", alt: "Kit de bienvenida", bg: "bg-primary/35" },
+      { src: "", alt: "Señalética", bg: "bg-secondary/40" },
+      { src: "", alt: "Papelería", bg: "bg-primary/20" },
+    ],
   },
 ];
 
