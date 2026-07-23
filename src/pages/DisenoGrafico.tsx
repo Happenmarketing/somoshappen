@@ -1,5 +1,4 @@
-import { useState, FormEvent } from "react";
-import { Helmet } from "react-helmet-async";
+import { useState, FormEvent, useEffect } from "react";
 import { CheckCircle, Loader2, ArrowRight, Sparkles, Layers, Palette, Package, Newspaper, Instagram as InstaIcon, Presentation, Brush } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
