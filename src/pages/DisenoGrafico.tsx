@@ -1,5 +1,5 @@
-import { useState, FormEvent, useEffect } from "react";
-import { CheckCircle, Loader2, ArrowRight, Sparkles, Layers, Palette, Package, Newspaper, Instagram as InstaIcon, Presentation, Brush } from "lucide-react";
+import { useState, FormEvent, useEffect, useCallback } from "react";
+import { CheckCircle, Loader2, ArrowRight, Sparkles, Layers, Palette, Package, Newspaper, Instagram as InstaIcon, Presentation, Brush, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import HappenLogo from "@/components/HappenLogo";
