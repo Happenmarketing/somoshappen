@@ -1,5 +1,5 @@
-import { useState, FormEvent, useEffect } from "react";
-import { CheckCircle, Loader2, ArrowRight, Sparkles, Layers, Palette, Package, Newspaper, Instagram as InstaIcon, Presentation, Brush } from "lucide-react";
+import { useState, FormEvent, useEffect, useCallback } from "react";
+import { CheckCircle, Loader2, ArrowRight, Sparkles, Layers, Palette, Package, Newspaper, Instagram as InstaIcon, Presentation, Brush, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import HappenLogo from "@/components/HappenLogo";
@@ -22,6 +22,8 @@ type Proyecto = {
   // TODO: reemplazar por imagen real importada desde @/assets/portfolio/...
   placeholderBg: string;
   span: string;
+  /** Placeholder de galería — reemplazar por importaciones reales de @/assets/portfolio/... */
+  galeria: { src: string; alt: string; bg: string }[];
 };
 
 // PLACEHOLDER portfolio — se reemplaza cuando el cliente pase el material real.
@@ -32,6 +34,11 @@ const proyectos: Proyecto[] = [
     descripcion: "Rebranding integral: logotipo, sistema visual y aplicaciones.",
     placeholderBg: "from-primary/40 to-primary/10",
     span: "md:col-span-8 md:row-span-2",
+    galeria: [
+      { src: "", alt: "Vista principal", bg: "bg-primary/30" },
+      { src: "", alt: "Aplicación papelería", bg: "bg-secondary/40" },
+      { src: "", alt: "Sistema visual", bg: "bg-primary/20" },
+    ],
   },
   {
     titulo: "Proyecto Dos",
@@ -39,6 +46,10 @@ const proyectos: Proyecto[] = [
     descripcion: "Diseño de línea completa de packaging premium.",
     placeholderBg: "from-secondary/60 to-primary/20",
     span: "md:col-span-4 md:row-span-1",
+    galeria: [
+      { src: "", alt: "Packaging principal", bg: "bg-secondary/50" },
+      { src: "", alt: "Detalle packaging", bg: "bg-primary/30" },
+    ],
   },
   {
     titulo: "Proyecto Tres",
@@ -46,6 +57,10 @@ const proyectos: Proyecto[] = [
     descripcion: "Memoria anual: diagramación, portada y sistema de infografías.",
     placeholderBg: "from-primary/30 to-secondary/40",
     span: "md:col-span-4 md:row-span-1",
+    galeria: [
+      { src: "", alt: "Portada editorial", bg: "bg-primary/25" },
+      { src: "", alt: "Doble página", bg: "bg-secondary/30" },
+    ],
   },
   {
     titulo: "Proyecto Cuatro",
@@ -53,6 +68,10 @@ const proyectos: Proyecto[] = [
     descripcion: "Concepto, arte y adaptaciones para vía pública, prensa y digital.",
     placeholderBg: "from-primary/50 to-primary/10",
     span: "md:col-span-6 md:row-span-1",
+    galeria: [
+      { src: "", alt: "Campaña vía pública", bg: "bg-primary/40" },
+      { src: "", alt: "Adaptación digital", bg: "bg-secondary/40" },
+    ],
   },
   {
     titulo: "Proyecto Cinco",
@@ -60,6 +79,10 @@ const proyectos: Proyecto[] = [
     descripcion: "Sistema visual para contenido en redes con alta consistencia.",
     placeholderBg: "from-secondary/40 to-primary/30",
     span: "md:col-span-6 md:row-span-1",
+    galeria: [
+      { src: "", alt: "Feed redes", bg: "bg-secondary/35" },
+      { src: "", alt: "Pieza individual", bg: "bg-primary/30" },
+    ],
   },
   {
     titulo: "Proyecto Seis",
@@ -67,6 +90,10 @@ const proyectos: Proyecto[] = [
     descripcion: "Presentación institucional de alto impacto para directorio.",
     placeholderBg: "from-primary/20 to-secondary/50",
     span: "md:col-span-4 md:row-span-1",
+    galeria: [
+      { src: "", alt: "Slide principal", bg: "bg-primary/25" },
+      { src: "", alt: "Slide secundario", bg: "bg-secondary/40" },
+    ],
   },
   {
     titulo: "Proyecto Siete",
@@ -74,6 +101,11 @@ const proyectos: Proyecto[] = [
     descripcion: "Papelería, señalética y kit de bienvenida para nuevos colaboradores.",
     placeholderBg: "from-primary/40 to-primary/20",
     span: "md:col-span-8 md:row-span-1",
+    galeria: [
+      { src: "", alt: "Kit de bienvenida", bg: "bg-primary/35" },
+      { src: "", alt: "Señalética", bg: "bg-secondary/40" },
+      { src: "", alt: "Papelería", bg: "bg-primary/20" },
+    ],
   },
 ];
 
@@ -114,6 +146,31 @@ const razones = [
 const DisenoGrafico = () => {
   const [enviado, setEnviado] = useState(false);
   const [enviando, setEnviando] = useState(false);
+  const [lightbox, setLightbox] = useState<{ proyectoIndex: number; imagenIndex: number } | null>(null);
+
+  const abrirLightbox = (proyectoIndex: number) => setLightbox({ proyectoIndex, imagenIndex: 0 });
+  const cerrarLightbox = () => setLightbox(null);
+  const siguienteImagen = useCallback(() => {
+    if (!lightbox) return;
+    const total = proyectos[lightbox.proyectoIndex].galeria.length;
+    setLightbox({ ...lightbox, imagenIndex: (lightbox.imagenIndex + 1) % total });
+  }, [lightbox]);
+  const anteriorImagen = useCallback(() => {
+    if (!lightbox) return;
+    const total = proyectos[lightbox.proyectoIndex].galeria.length;
+    setLightbox({ ...lightbox, imagenIndex: (lightbox.imagenIndex - 1 + total) % total });
+  }, [lightbox]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (!lightbox) return;
+      if (e.key === "Escape") cerrarLightbox();
+      if (e.key === "ArrowRight") siguienteImagen();
+      if (e.key === "ArrowLeft") anteriorImagen();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightbox, siguienteImagen, anteriorImagen]);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -250,15 +307,23 @@ const DisenoGrafico = () => {
 
           <div className="mt-14 grid grid-cols-1 md:grid-cols-12 md:auto-rows-[240px] gap-4">
             {proyectos.map((p, i) => (
-              <article
+              <button
                 key={i}
-                className={`group relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] md:aspect-auto bg-gradient-to-br ${p.placeholderBg} ${p.span}`}
+                type="button"
+                onClick={() => abrirLightbox(i)}
+                aria-label={`Ver galería de ${p.titulo}`}
+                className={`group relative overflow-hidden rounded-2xl text-left aspect-[4/3] md:aspect-auto bg-gradient-to-br ${p.placeholderBg} ${p.span} focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
               >
                 {/* Placeholder — reemplazar por <img /> cuando llegue el material */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-foreground/30 text-xs uppercase tracking-widest">
                     Imagen del proyecto
                   </span>
+                </div>
+
+                {/* Hint de galería */}
+                <div className="absolute top-4 right-4 rounded-full bg-black/40 backdrop-blur text-white px-3 py-1 text-[11px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Ver galería
                 </div>
 
                 <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-7 bg-gradient-to-t from-black/85 via-black/40 to-transparent text-white opacity-90 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
@@ -272,11 +337,107 @@ const DisenoGrafico = () => {
                     {p.descripcion}
                   </p>
                 </div>
-              </article>
+              </button>
             ))}
           </div>
         </div>
       </section>
+
+      {/* LIGHTBOX */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-sm p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Galería de ${proyectos[lightbox.proyectoIndex].titulo}`}
+          onClick={cerrarLightbox}
+        >
+          <button
+            type="button"
+            onClick={cerrarLightbox}
+            aria-label="Cerrar galería"
+            className="absolute top-5 right-5 z-10 rounded-full bg-white/10 text-white p-2 hover:bg-white/20 transition-colors"
+          >
+            <X className="h-6 w-6" />
+          </button>
+
+          <div
+            className="relative w-full max-w-5xl max-h-[85vh] flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Imagen principal */}
+            <div className="relative flex-1 min-h-[50vh] rounded-2xl overflow-hidden bg-foreground/10 flex items-center justify-center">
+              {(() => {
+                const img = proyectos[lightbox.proyectoIndex].galeria[lightbox.imagenIndex];
+                return img.src ? (
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="h-full w-full object-contain"
+                  />
+                ) : (
+                  <div className={`h-full w-full ${img.bg} flex items-center justify-center`}>
+                    <span className="text-foreground/30 text-xs uppercase tracking-widest">
+                      {img.alt}
+                    </span>
+                  </div>
+                );
+              })()}
+
+              {proyectos[lightbox.proyectoIndex].galeria.length > 1 && (
+                <>
+                  <button
+                    type="button"
+                    onClick={anteriorImagen}
+                    aria-label="Imagen anterior"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 text-white p-2 hover:bg-black/70 transition-colors"
+                  >
+                    <ChevronLeft className="h-6 w-6" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={siguienteImagen}
+                    aria-label="Imagen siguiente"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 text-white p-2 hover:bg-black/70 transition-colors"
+                  >
+                    <ChevronRight className="h-6 w-6" />
+                  </button>
+                </>
+              )}
+            </div>
+
+            {/* Info + thumbnails */}
+            <div className="mt-4 text-center text-white">
+              <p className="text-[11px] uppercase tracking-widest text-primary/80">
+                {proyectos[lightbox.proyectoIndex].categoria}
+              </p>
+              <h3 className="mt-1 text-xl font-semibold">
+                {proyectos[lightbox.proyectoIndex].titulo}
+              </h3>
+              <p className="mt-1 text-sm text-white/70 max-w-2xl mx-auto">
+                {proyectos[lightbox.proyectoIndex].descripcion}
+              </p>
+
+              {proyectos[lightbox.proyectoIndex].galeria.length > 1 && (
+                <div className="mt-4 flex items-center justify-center gap-2">
+                  {proyectos[lightbox.proyectoIndex].galeria.map((g, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={() => setLightbox({ ...lightbox, imagenIndex: idx })}
+                      aria-label={`Ver imagen ${idx + 1}`}
+                      aria-current={idx === lightbox.imagenIndex ? "true" : undefined}
+                      className={`h-2 rounded-full transition-all ${
+                        idx === lightbox.imagenIndex ? "w-6 bg-primary" : "w-2 bg-white/40 hover:bg-white/60"
+                      }`}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* SERVICIOS */}
       <section className="bg-[hsl(var(--surface-light))] text-[hsl(var(--surface-light-foreground))] py-14 md:py-24 lg:py-32">
