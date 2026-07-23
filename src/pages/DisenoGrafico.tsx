@@ -146,6 +146,31 @@ const razones = [
 const DisenoGrafico = () => {
   const [enviado, setEnviado] = useState(false);
   const [enviando, setEnviando] = useState(false);
+  const [lightbox, setLightbox] = useState<{ proyectoIndex: number; imagenIndex: number } | null>(null);
+
+  const abrirLightbox = (proyectoIndex: number) => setLightbox({ proyectoIndex, imagenIndex: 0 });
+  const cerrarLightbox = () => setLightbox(null);
+  const siguienteImagen = useCallback(() => {
+    if (!lightbox) return;
+    const total = proyectos[lightbox.proyectoIndex].galeria.length;
+    setLightbox({ ...lightbox, imagenIndex: (lightbox.imagenIndex + 1) % total });
+  }, [lightbox]);
+  const anteriorImagen = useCallback(() => {
+    if (!lightbox) return;
+    const total = proyectos[lightbox.proyectoIndex].galeria.length;
+    setLightbox({ ...lightbox, imagenIndex: (lightbox.imagenIndex - 1 + total) % total });
+  }, [lightbox]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (!lightbox) return;
+      if (e.key === "Escape") cerrarLightbox();
+      if (e.key === "ArrowRight") siguienteImagen();
+      if (e.key === "ArrowLeft") anteriorImagen();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightbox, siguienteImagen, anteriorImagen]);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
