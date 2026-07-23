@@ -146,21 +146,24 @@ const DisenoGrafico = () => {
     }
   };
 
+  useEffect(() => {
+    const prevTitle = document.title;
+    document.title = "Estudio de diseño gráfico | happen_";
+    const meta = document.querySelector('meta[name="description"]');
+    const prevDesc = meta?.getAttribute("content") ?? "";
+    meta?.setAttribute(
+      "content",
+      "Estudio de diseño gráfico en Uruguay. Identidad de marca, packaging, editorial, campañas y sistemas visuales con estrategia detrás."
+    );
+    return () => {
+      document.title = prevTitle;
+      if (meta && prevDesc) meta.setAttribute("content", prevDesc);
+    };
+  }, []);
+
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Estudio de diseño gráfico | happen_</title>
-        <meta
-          name="description"
-          content="Estudio de diseño gráfico en Uruguay. Identidad de marca, packaging, editorial, campañas y sistemas visuales con estrategia detrás."
-        />
-        <meta property="og:title" content="Estudio de diseño gráfico | happen_" />
-        <meta
-          property="og:description"
-          content="Diseño gráfico con estrategia. Identidad, packaging, editorial, campañas y más."
-        />
-        <link rel="canonical" href="https://www.somoshappen.com/disenografico" />
-      </Helmet>
+
 
       {/* Barra superior mínima — no linkea a la home */}
       <header className="absolute top-0 inset-x-0 z-50">
