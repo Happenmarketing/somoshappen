@@ -98,7 +98,7 @@ const servicios = [
   { icon: Package, titulo: "Packaging", desc: "Cajas, etiquetas y bolsas diseñadas para destacar en góndola y transmitir la calidad de tu producto." },
   { icon: Newspaper, titulo: "Editorial", desc: "Catálogos, memorias, revistería y reportes corporativos claros, legibles y bien jerarquizados." },
   { icon: Layers, titulo: "Campañas gráficas", desc: "Conceptos creativos y adaptaciones multiplataforma para tus lanzamientos o promociones." },
-  { icon: InstaIcon, titulo: "Contenido para redes", desc: "Plantillas, gráficos y sistemas visuales para que tu comunicación digital transmita solidez." },
+  { icon: InstaIcon, titulo: "Contenido para redes", desc: "Desde reels hasta piezas 1 shot, diseñamos y editamos materiales audiovisuales.\u00a0" },
   { icon: Presentation, titulo: "Presentaciones", desc: "PPT y Keynotes de alto impacto pensados para reuniones de directorio, inversores y ventas." },
   { icon: Palette, titulo: "Papelería e identidad aplicada", desc: "Tarjetas, firmas de email, señalética y papelería corporativa con acabado profesional." },
   { icon: Brush, titulo: "Punto de venta y exhibición", desc: "Materiales para vidrieras, displays, activaciones y piezas de exhibición en local." },
