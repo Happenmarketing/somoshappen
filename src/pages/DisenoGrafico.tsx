@@ -3,6 +3,7 @@ import { CheckCircle, Loader2, ArrowRight, Sparkles, Layers, Palette, Package, N
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import HappenLogo from "@/components/HappenLogo";
+import LogoMarquee from "@/components/LogoMarquee";
 import happenIconComplete from "@/assets/happen-icon-complete.webp";
 
 /**
@@ -498,43 +499,9 @@ const DisenoGrafico = () => {
         </div>
       </section>
 
-      {/* PROCESO */}
+
+      {/* PRUEBA SOCIAL — slider de logos */}
       <section className="bg-[hsl(var(--surface-light))] text-[hsl(var(--surface-light-foreground))] py-14 md:py-24 lg:py-32">
-        <div className="container">
-          <div className="max-w-2xl">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
-              Cómo trabajamos
-            </span>
-            <h2 className="mt-4 text-4xl lg:text-6xl font-semibold leading-tight">
-              Un proceso{" "}
-              <span className="italic font-light text-primary">claro,</span>{" "}
-              de la idea a la pieza final.
-            </h2>
-          </div>
-
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {[
-              { n: "1", t: "Brief y diagnóstico", d: "Escuchamos, entendemos el negocio y definimos alcance, objetivos y criterios de éxito." },
-              { n: "2", t: "Concepto", d: "Proponemos una dirección creativa con racional estratégico. No mostramos opciones sueltas: mostramos ideas." },
-              { n: "3", t: "Diseño y producción", d: "Ejecutamos con obsesión por el detalle: tipografía, color, sistema, aplicaciones." },
-              { n: "4", t: "Entrega e implementación", d: "Entregamos artes finales, guidelines y acompañamos la puesta en marcha." },
-            ].map((s) => (
-              <div key={s.n} className="relative rounded-3xl bg-card text-card-foreground p-7 pt-12 shadow-card">
-                <div className="absolute -top-6 left-7 h-12 w-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg font-semibold shadow-soft">
-                  {s.n}
-                </div>
-                <h3 className="text-xl font-semibold">{s.t}</h3>
-                <p className="mt-3 text-sm text-card-foreground/70 leading-relaxed">
-                  {s.d}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PRUEBA SOCIAL — placeholder testimonios */}
-      <section className="bg-background py-14 md:py-24 lg:py-32">
         <div className="container">
           <div className="max-w-2xl">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
@@ -545,22 +512,10 @@ const DisenoGrafico = () => {
               <span className="italic font-light text-primary">con nosotros.</span>
             </h2>
           </div>
+        </div>
 
-          {/* TODO: reemplazar por testimonios reales (nombre, cargo, empresa, quote) */}
-          <div className="mt-14 grid md:grid-cols-3 gap-5">
-            {[1, 2, 3].map((i) => (
-              <blockquote key={i} className="rounded-3xl bg-foreground/5 border border-foreground/10 p-8">
-                <p className="text-lg leading-relaxed text-foreground/85">
-                  "Placeholder de testimonio. Espacio reservado para una frase real de
-                  un cliente sobre el trabajo de diseño."
-                </p>
-                <footer className="mt-6">
-                  <p className="text-sm font-semibold">Nombre Apellido</p>
-                  <p className="text-xs text-foreground/60">Cargo · Empresa</p>
-                </footer>
-              </blockquote>
-            ))}
-          </div>
+        <div className="mt-10">
+          <LogoMarquee />
         </div>
       </section>
 
