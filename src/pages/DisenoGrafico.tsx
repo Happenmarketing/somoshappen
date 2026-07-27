@@ -276,6 +276,41 @@ const DisenoGrafico = () => {
         </div>
       </section>
 
+      {/* SERVICIOS */}
+      <section className="bg-[hsl(var(--surface-light))] text-[hsl(var(--surface-light-foreground))] py-14 md:py-24 lg:py-32">
+        <div className="container">
+          <div className="max-w-2xl">
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
+              SOLUCIONES
+            </span>
+            <h2 className="mt-4 text-4xl lg:text-6xl font-semibold leading-tight">
+              ¿Qué necesitás{" "}
+              <span className="italic font-light text-primary">diseñar?</span>
+            </h2>
+            <p className="mt-6 text-lg opacity-75">
+              Resolvemos tu necesidad puntual asegurando que cada pieza responda a tus objetivos comerciales y dialogue con tu marca.
+            </p>
+          </div>
+
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {servicios.map(({ icon: Icon, titulo, desc }) => (
+              <div
+                key={titulo}
+                className="group rounded-3xl bg-card text-card-foreground p-7 shadow-card hover:-translate-y-1 transition-all"
+              >
+                <div className="h-12 w-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h3 className="mt-6 text-lg font-semibold">{titulo}</h3>
+                <p className="mt-2 text-sm text-card-foreground/70 leading-relaxed">
+                  {desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* PORTFOLIO — bento grid */}
       <section id="portfolio" className="bg-background py-14 md:py-24 lg:py-32">
         <div className="container">
@@ -433,43 +468,6 @@ const DisenoGrafico = () => {
           </div>
         </div>
       )}
-
-      {/* SERVICIOS */}
-      <section className="bg-[hsl(var(--surface-light))] text-[hsl(var(--surface-light-foreground))] py-14 md:py-24 lg:py-32">
-        <div className="container">
-          <div className="max-w-2xl">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
-              SOLUCIONES
-            </span>
-            <h2 className="mt-4 text-4xl lg:text-6xl font-semibold leading-tight">
-              ¿Qué necesitás{" "}
-              <span className="italic font-light text-primary">diseñar?</span>
-            </h2>
-            <p className="mt-6 text-lg opacity-75">
-              Resolvemos tu necesidad puntual asegurando que cada pieza responda a tus objetivos comerciales y dialogue con tu marca.
-            </p>
-          </div>
-
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {servicios.map(({ icon: Icon, titulo, desc }) => (
-              <div
-                key={titulo}
-                className="group rounded-3xl bg-card text-card-foreground p-7 shadow-card hover:-translate-y-1 transition-all"
-              >
-                <div className="h-12 w-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <h3 className="mt-6 text-lg font-semibold">{titulo}</h3>
-                <p className="mt-2 text-sm text-card-foreground/70 leading-relaxed">
-                  {desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* POR QUÉ HAPPEN */}
       <section className="bg-background py-14 md:py-24 lg:py-32">
         <div className="container">
           <div className="max-w-2xl">
