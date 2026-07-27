@@ -524,8 +524,8 @@ const DisenoGrafico = () => {
         <div className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/30 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl" />
 
-        <div className="container relative grid lg:grid-cols-2 gap-12 items-center">
-          <div>
+        <div className="container relative">
+          <div className="max-w-3xl mx-auto text-center">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
               Hablemos
             </span>
@@ -533,26 +533,12 @@ const DisenoGrafico = () => {
               ¿Tenés un proyecto de{" "}
               <span className="italic font-light text-primary">diseño</span> en mente?
             </h2>
-            <p className="mt-6 text-lg text-foreground/80 max-w-lg">
+            <p className="mt-6 text-lg text-foreground/80">
               Contanos qué necesitás. Te respondemos con una propuesta concreta en las próximas horas.
             </p>
-
-            <div className="mt-8 space-y-3 text-sm text-foreground/70">
-              <p>
-                <a href="mailto:hola@happenmarketing.com" className="hover:text-primary transition">
-                  hola@happenmarketing.com
-                </a>
-              </p>
-              <p>
-                <a href="https://wa.me/59897490180" className="hover:text-primary transition">
-                  WhatsApp · +598 97 490 180
-                </a>
-              </p>
-              <p>Puntas de Santiago, 1694 · Montevideo</p>
-            </div>
           </div>
 
-          <div>
+          <div className="mt-12 max-w-xl mx-auto">
             {enviado ? (
               <div className="rounded-[2rem] bg-foreground/10 p-8 border border-foreground/20 flex flex-col items-center text-center gap-4">
                 <CheckCircle className="h-12 w-12 text-primary" />
@@ -613,6 +599,20 @@ const DisenoGrafico = () => {
                 </button>
               </form>
             )}
+          </div>
+
+          <div className="mt-12 text-center space-y-3 text-sm text-foreground/70">
+            <p>
+              <a href="mailto:hola@happenmarketing.com" className="hover:text-primary transition">
+                hola@happenmarketing.com
+              </a>
+            </p>
+            <p>
+              <a href="https://wa.me/59897490180" className="hover:text-primary transition">
+                WhatsApp · +598 97 490 180
+              </a>
+            </p>
+            <p>Puntas de Santiago, 1694 · Montevideo</p>
           </div>
         </div>
       </section>
