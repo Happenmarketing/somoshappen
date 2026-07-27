@@ -474,8 +474,8 @@ const DisenoGrafico = () => {
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
               Porqué elegirnos
             </span>
-            <h2 className="mt-4 text-4xl lg:text-6xl font-semibold leading-tight">
-              No somos una imprenta creativa.{" "}
+            <h2 className="mt-4 text-4xl lg:text-6xl font-semibold leading-tight whitespace-pre-line">
+              Pensamos soluciones y las transformamos en diseños con criterio visual.{"\n\n"}
               <span className="italic font-light text-primary">
                 Entendemos rápido, pensamos en quién recibe cada pieza y nos aseguramos de que funcione donde va. Sin que tengas que explicarlo dos veces.
               </span>
