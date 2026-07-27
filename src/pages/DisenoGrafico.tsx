@@ -288,7 +288,7 @@ const DisenoGrafico = () => {
               <span className="italic font-light text-primary">diseñar?</span>
             </h2>
             <p className="mt-6 text-lg opacity-75">
-              Resolvemos tu necesidad puntual asegurando que cada pieza responda a tus objetivos comerciales y dialogue con tu marca.
+              Resolvemos tus necesidades para que cada pieza responda a los objetivos de tu marca.
             </p>
           </div>
 
