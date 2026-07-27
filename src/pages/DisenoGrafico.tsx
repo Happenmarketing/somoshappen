@@ -314,10 +314,10 @@ const DisenoGrafico = () => {
           </div>
 
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {servicios.map(({ icon: Icon, titulo, desc }) => (
+            {servicios.map(({ icon: Icon, titulo, desc, tags }) => (
               <div
                 key={titulo}
-                className="group rounded-3xl bg-card text-card-foreground p-7 shadow-card hover:-translate-y-1 transition-all"
+                className="group flex flex-col h-full rounded-3xl bg-card text-card-foreground p-7 shadow-card hover:-translate-y-1 transition-all"
               >
                 <div className="h-12 w-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <Icon className="h-5 w-5" />
@@ -326,6 +326,16 @@ const DisenoGrafico = () => {
                 <p className="mt-2 text-sm text-card-foreground/70 leading-relaxed">
                   {desc}
                 </p>
+                <div className="mt-auto pt-5 flex flex-wrap gap-2">
+                  {tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
