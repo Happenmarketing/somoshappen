@@ -461,17 +461,17 @@ const DisenoGrafico = () => {
           </div>
         </div>
       )}
-      <section className="bg-background py-16 md:py-28 lg:py-36">
+      <section className="bg-background py-12 md:py-16 lg:py-20">
         <div className="container">
           <div className="max-w-4xl">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
               Porqué elegirnos
             </span>
-            <h2 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1]">
+            <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.1]">
               Diseño que piensa antes de{" "}
               <span className="italic font-light text-primary">diseñar</span>.
             </h2>
-            <p className="mt-6 md:mt-8 text-lg md:text-xl lg:text-2xl leading-relaxed text-foreground/80 max-w-3xl">
+            <p className="mt-4 md:mt-5 text-lg md:text-xl lg:text-2xl leading-snug text-foreground/80 max-w-3xl">
               Entendemos rápido, pensamos en quién recibe cada pieza y nos aseguramos de que funcione donde va.{" "}
               <span className="italic font-light text-primary">
                 Sin que tengas que explicarlo dos veces.
@@ -479,15 +479,15 @@ const DisenoGrafico = () => {
             </p>
           </div>
 
-          <div className="mt-16 md:mt-24 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="mt-10 md:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {razones.map((r) => (
               <div
                 key={r.n}
-                className="rounded-3xl bg-foreground/5 border border-foreground/10 p-7"
+                className="rounded-3xl bg-foreground/5 border border-foreground/10 p-6"
               >
-                <span className="text-4xl font-light text-primary/60">{r.n}</span>
-                <h3 className="mt-4 text-xl font-semibold">{r.titulo}</h3>
-                <p className="mt-3 text-sm text-foreground/70 leading-relaxed">
+                <span className="text-3xl md:text-4xl font-light text-primary/60">{r.n}</span>
+                <h3 className="mt-3 text-lg md:text-xl font-semibold">{r.titulo}</h3>
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
                   {r.desc}
                 </p>
               </div>
