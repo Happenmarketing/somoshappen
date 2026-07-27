@@ -319,8 +319,8 @@ const DisenoGrafico = () => {
               Portfolio
             </span>
             <h2 className="mt-4 text-4xl lg:text-6xl font-semibold leading-tight">
-              Trabajos que{" "}
-              <span className="italic font-light text-primary">hablan por sí solos.</span>
+              Algunos{" "}
+              <span className="italic font-light text-primary">proyectos.</span>
             </h2>
             <p className="mt-6 text-foreground/70 text-lg">
               Una selección de proyectos donde el diseño resolvió problemas reales de marca y negocio.
