@@ -1,4 +1,4 @@
-import womanBinoc from "@/assets/happen-metodologia-clara.webp.asset.json";
+import womanBinoc from "@/assets/happen-metodologia-clara.webp";
 
 const steps = [
   {
