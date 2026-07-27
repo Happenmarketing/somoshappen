@@ -323,7 +323,7 @@ const DisenoGrafico = () => {
               <span className="italic font-light text-primary">proyectos.</span>
             </h2>
             <p className="mt-6 text-foreground/70 text-lg">
-              Una selección de proyectos donde el diseño resolvió problemas reales de marca y negocio.
+              Una selección de trabajos reales pensados en quién y dónde va a verlos.
             </p>
           </div>
 
