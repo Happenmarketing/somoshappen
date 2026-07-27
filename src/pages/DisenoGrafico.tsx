@@ -240,8 +240,8 @@ const DisenoGrafico = () => {
 
             <p className="mt-8 max-w-2xl text-lg lg:text-xl text-foreground/75 leading-relaxed">
               Transformamos tus ideas en diseños con criterio que transmiten
-              solidez y generan confianza. Soluciones ágiles y flexibles a la
-              medida de tu empresa.
+              solidez y generan confianza. Brindamos soluciones ágiles y
+              flexibles a la medida de tu empresa.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
