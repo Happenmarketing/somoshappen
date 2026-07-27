@@ -216,7 +216,7 @@ const DisenoGrafico = () => {
       </header>
 
       {/* HERO */}
-      <section className="relative min-h-screen overflow-hidden bg-gradient-hero pt-32 pb-20 flex items-center">
+      <section className="relative min-h-[90vh] overflow-hidden bg-gradient-hero pt-24 pb-12 flex items-center">
         <div className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/30 blur-3xl" />
         <div className="pointer-events-none absolute bottom-0 left-1/4 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
 
@@ -227,22 +227,19 @@ const DisenoGrafico = () => {
               Estudio de diseño gráfico
             </span>
 
-            <h1 className="mt-6 text-balance text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-semibold leading-[1.02] text-foreground">
+            <h1 className="mt-4 text-balance text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.05] text-foreground">
               Diseño para empresas que quieren que su{" "}
               <span className="italic font-light text-primary">marca</span> esté a
               la altura de su{" "}
               <span className="italic font-light text-primary">negocio</span>.
             </h1>
 
-            <p className="mt-8 max-w-2xl text-lg lg:text-xl text-foreground/75 leading-relaxed">
+            <p className="mt-4 max-w-2xl text-base lg:text-lg text-foreground/75 leading-relaxed">
               Transformamos tus ideas en diseños con criterio que transmiten
-              solidez y generan confianza.
-            </p>
-            <p className="mt-2 max-w-2xl text-lg lg:text-xl font-medium text-foreground leading-relaxed">
-              Soluciones ágiles, flexibles y a la medida de tu empresa.
+              solidez y generan confianza. Soluciones ágiles, flexibles y a la medida de tu empresa.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-6 flex flex-wrap gap-4">
               <a
                 href="#hablemos"
                 className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-7 py-3.5 text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all"
@@ -257,7 +254,7 @@ const DisenoGrafico = () => {
                 Ver portfolio
               </a>
             </div>
-            <p className="mt-4 text-sm text-foreground/60">
+            <p className="mt-3 text-sm text-foreground/60">
               +15 años de trayectoria · Respuestas en menos de 24 hs
             </p>
           </div>
