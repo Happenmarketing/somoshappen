@@ -499,40 +499,6 @@ const DisenoGrafico = () => {
         </div>
       </section>
 
-      {/* PROCESO */}
-      <section className="bg-[hsl(var(--surface-light))] text-[hsl(var(--surface-light-foreground))] py-14 md:py-24 lg:py-32">
-        <div className="container">
-          <div className="max-w-2xl">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
-              Cómo trabajamos
-            </span>
-            <h2 className="mt-4 text-4xl lg:text-6xl font-semibold leading-tight">
-              Un proceso{" "}
-              <span className="italic font-light text-primary">claro,</span>{" "}
-              de la idea a la pieza final.
-            </h2>
-          </div>
-
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {[
-              { n: "1", t: "Brief y diagnóstico", d: "Escuchamos, entendemos el negocio y definimos alcance, objetivos y criterios de éxito." },
-              { n: "2", t: "Concepto", d: "Proponemos una dirección creativa con racional estratégico. No mostramos opciones sueltas: mostramos ideas." },
-              { n: "3", t: "Diseño y producción", d: "Ejecutamos con obsesión por el detalle: tipografía, color, sistema, aplicaciones." },
-              { n: "4", t: "Entrega e implementación", d: "Entregamos artes finales, guidelines y acompañamos la puesta en marcha." },
-            ].map((s) => (
-              <div key={s.n} className="relative rounded-3xl bg-card text-card-foreground p-7 pt-12 shadow-card">
-                <div className="absolute -top-6 left-7 h-12 w-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg font-semibold shadow-soft">
-                  {s.n}
-                </div>
-                <h3 className="text-xl font-semibold">{s.t}</h3>
-                <p className="mt-3 text-sm text-card-foreground/70 leading-relaxed">
-                  {s.d}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* PRUEBA SOCIAL — placeholder testimonios */}
       <section className="bg-background py-14 md:py-24 lg:py-32">
