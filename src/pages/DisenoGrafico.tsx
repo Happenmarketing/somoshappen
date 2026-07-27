@@ -1,5 +1,5 @@
 import { useState, FormEvent, useEffect, useCallback } from "react";
-import { CheckCircle, Loader2, ArrowRight, Sparkles, Layers, Palette, Package, Newspaper, Instagram as InstaIcon, Presentation, Brush, X, ChevronLeft, ChevronRight, Linkedin, MapPin, Instagram as InstagramIcon } from "lucide-react";
+import { CheckCircle, Loader2, ArrowRight, Sparkles, Palette, Package, Newspaper, Instagram as InstaIcon, Brush, Store, FileText, X, ChevronLeft, ChevronRight, Linkedin, MapPin, Instagram as InstagramIcon } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import HappenLogo from "@/components/HappenLogo";
@@ -94,14 +94,42 @@ const proyectos: Proyecto[] = [
 
 
 const servicios = [
-  { icon: Sparkles, titulo: "Identidad de marca", desc: "Logotipos, sistemas visuales, brandbooks y guías para que tu marca se vea consistente en todos lados." },
-  { icon: InstaIcon, titulo: "Contenido para redes", desc: "Desde reels hasta piezas 1 shot, diseñamos y editamos materiales audiovisuales.\u00a0" },
-  { icon: Newspaper, titulo: "Editorial", desc: "Catálogos, memorias, revistería y reportes corporativos claros, legibles y bien jerarquizados." },
-  { icon: Layers, titulo: "Campañas gráficas", desc: "Conceptos creativos y adaptaciones multiplataforma para tus lanzamientos o promociones." },
-  { icon: Package, titulo: "Packaging", desc: "Cajas, etiquetas y bolsas diseñadas para destacar en góndola y transmitir la calidad de tu producto." },
-  { icon: Presentation, titulo: "Presentaciones", desc: "PPT y Keynotes de alto impacto pensados para reuniones de directorio, inversores y ventas." },
-  { icon: Palette, titulo: "Papelería e identidad aplicada", desc: "Tarjetas, firmas de email, señalética y papelería corporativa con acabado profesional." },
-  { icon: Brush, titulo: "Punto de venta y exhibición", desc: "Materiales para vidrieras, displays, activaciones y piezas de exhibición en local." },
+  {
+    icon: Palette,
+    titulo: "Identidad de marca",
+    desc: "El sistema visual base para posicionar tu empresa. Diseñamos marcas nuevas o renovamos tu imagen con criterio.",
+    tags: ["Logo", "Brandbook", "Paleta", "Tipografía", "Sistema gráfico"],
+  },
+  {
+    icon: InstaIcon,
+    titulo: "Piezas digitales & redes",
+    desc: "Desde reels hasta piezas 1 shot, diseñamos y editamos materiales audiovisuales para tus canales digitales.",
+    tags: ["Reels", "1 shot", "Placas", "Banners web", "Mailings"],
+  },
+  {
+    icon: Newspaper,
+    titulo: "Piezas editoriales & impresos",
+    desc: "Publicaciones claras, bien estructuradas y listas para imprenta. Catálogos, revistas y memorias.",
+    tags: ["Catálogos", "Revistas", "Memorias", "Folletos", "Reportes"],
+  },
+  {
+    icon: Package,
+    titulo: "Packaging & merchandising",
+    desc: "Empaques que conectan en góndola. Cajas, etiquetas, fajas y bolsas que transmiten calidad.",
+    tags: ["Cajas", "Etiquetas", "Fajas", "Bolsas", "Merchandising"],
+  },
+  {
+    icon: Store,
+    titulo: "Punto de venta & POP",
+    desc: "Presencia en locales y espacios físicos. Banners, exhibidores, carteleras y piezas para vidrieras.",
+    tags: ["Banners", "Exhibidores", "Carteleras", "Vidrieras", "Promocionales"],
+  },
+  {
+    icon: FileText,
+    titulo: "Materiales corporativos & papelería",
+    desc: "La presencia de tu marca en el día a día. Tarjetas, carpetas, firmas y plantillas profesionales.",
+    tags: ["Tarjetas", "Carpetas", "Membretadas", "Firmas", "Plantillas"],
+  },
 ];
 
 const razones = [
@@ -286,10 +314,10 @@ const DisenoGrafico = () => {
           </div>
 
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {servicios.map(({ icon: Icon, titulo, desc }) => (
+            {servicios.map(({ icon: Icon, titulo, desc, tags }) => (
               <div
                 key={titulo}
-                className="group rounded-3xl bg-card text-card-foreground p-7 shadow-card hover:-translate-y-1 transition-all"
+                className="group flex flex-col h-full rounded-3xl bg-card text-card-foreground p-7 shadow-card hover:-translate-y-1 transition-all"
               >
                 <div className="h-12 w-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <Icon className="h-5 w-5" />
@@ -298,6 +326,16 @@ const DisenoGrafico = () => {
                 <p className="mt-2 text-sm text-card-foreground/70 leading-relaxed">
                   {desc}
                 </p>
+                <div className="mt-auto pt-5 flex flex-wrap gap-2">
+                  {tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
