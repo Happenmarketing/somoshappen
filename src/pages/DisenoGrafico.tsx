@@ -471,8 +471,14 @@ const DisenoGrafico = () => {
       <section className="bg-background py-14 md:py-24 lg:py-32">
         <div className="container">
           <div className="max-w-2xl">
-            <h2 className="text-4xl lg:text-6xl font-semibold leading-tight">
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
               Porqué elegirnos
+            </span>
+            <h2 className="mt-4 text-4xl lg:text-6xl font-semibold leading-tight">
+              No somos una imprenta creativa.{" "}
+              <span className="italic font-light text-primary">
+                Entendemos rápido, pensamos en quién recibe cada pieza y nos aseguramos de que funcione donde va. Sin que tengas que explicarlo dos veces.
+              </span>
             </h2>
           </div>
 
