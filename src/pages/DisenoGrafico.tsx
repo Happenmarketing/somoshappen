@@ -1,5 +1,5 @@
 import { useState, FormEvent, useEffect, useCallback } from "react";
-import { CheckCircle, Loader2, ArrowRight, Sparkles, Layers, Palette, Package, Newspaper, Instagram as InstaIcon, Presentation, Brush, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { CheckCircle, Loader2, ArrowRight, Sparkles, Layers, Palette, Package, Newspaper, Instagram as InstaIcon, Presentation, Brush, X, ChevronLeft, ChevronRight, Linkedin, MapPin, Instagram as InstagramIcon } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import HappenLogo from "@/components/HappenLogo";
@@ -525,94 +525,159 @@ const DisenoGrafico = () => {
         <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl" />
 
         <div className="container relative">
-          <div className="max-w-3xl mx-auto text-center">
+          {/* Encabezado */}
+          <div className="text-center mb-12">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
               Hablemos
             </span>
-            <h2 className="mt-4 text-4xl lg:text-6xl font-semibold leading-[1.05]">
-              ¿Tenés un proyecto de{" "}
-              <span className="italic font-light text-primary">diseño</span> en mente?
+            <h2 className="mt-4 text-balance text-5xl lg:text-7xl font-semibold leading-[1.05]">
+              <span className="italic font-light text-primary">Tomemos un café.</span>
             </h2>
-            <p className="mt-6 text-lg text-foreground/80">
-              Contanos qué necesitás. Te respondemos con una propuesta concreta en las próximas horas.
+            <p className="mt-6 max-w-xl mx-auto text-lg text-foreground/70">
+              Si tenés un desafío de comunicación o diseño, aunque no sepas
+              exactamente cuál es, es una buena razón para tomar un café.
             </p>
           </div>
 
-          <div className="mt-12 max-w-xl mx-auto">
+          {/* Formulario */}
+          <div className="max-w-xl mx-auto">
             {enviado ? (
-              <div className="rounded-[2rem] bg-foreground/10 p-8 border border-foreground/20 flex flex-col items-center text-center gap-4">
+              <div className="relative rounded-[2rem] bg-primary/10 p-8 border border-primary/20 flex flex-col items-center text-center gap-4">
                 <CheckCircle className="h-12 w-12 text-primary" />
                 <h3 className="text-2xl font-semibold">¡Recibimos tu mensaje!</h3>
-                <p className="text-foreground/80">Te respondemos en las próximas horas.</p>
+                <p className="text-foreground/70">Te respondemos en las próximas horas.</p>
               </div>
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="rounded-[2rem] bg-foreground/5 p-8 shadow-soft border border-foreground/10 space-y-5"
+                className="relative rounded-[2rem] bg-foreground/5 p-8 shadow-soft border border-foreground/10"
               >
-                <div>
-                  <label htmlFor="nombre-dg" className="block text-sm font-medium mb-2">Nombre</label>
-                  <input
-                    id="nombre-dg"
-                    name="nombre"
-                    type="text"
-                    required
-                    placeholder="Tu nombre"
-                    className="w-full rounded-xl bg-foreground/5 border border-foreground/20 px-4 py-3 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition"
-                  />
+                <div className="space-y-5">
+                  <div>
+                    <label htmlFor="nombre" className="block text-sm font-medium mb-2">
+                      Nombre
+                    </label>
+                    <input
+                      id="nombre"
+                      name="nombre"
+                      type="text"
+                      required
+                      placeholder="Tu nombre"
+                      className="w-full rounded-xl bg-foreground/5 border border-foreground/20 px-4 py-3 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                      Email
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      placeholder="tu@email.com"
+                      className="w-full rounded-xl bg-foreground/5 border border-foreground/20 px-4 py-3 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="mensaje" className="block text-sm font-medium mb-2">
+                      Mensaje
+                    </label>
+                    <textarea
+                      id="mensaje"
+                      name="mensaje"
+                      required
+                      rows={4}
+                      placeholder="Contanos sobre tu proyecto..."
+                      className="w-full rounded-xl bg-foreground/5 border border-foreground/20 px-4 py-3 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition resize-none"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={enviando}
+                    className="w-full rounded-xl bg-primary text-primary-foreground font-semibold px-6 py-3.5 hover:bg-primary/90 transition shadow-soft disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  >
+                    {enviando ? (
+                      <>
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        Enviando...
+                      </>
+                    ) : (
+                      "Enviar mensaje"
+                    )}
+                  </button>
                 </div>
-                <div>
-                  <label htmlFor="email-dg" className="block text-sm font-medium mb-2">Email</label>
-                  <input
-                    id="email-dg"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder="tu@email.com"
-                    className="w-full rounded-xl bg-foreground/5 border border-foreground/20 px-4 py-3 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="mensaje-dg" className="block text-sm font-medium mb-2">Contanos tu proyecto</label>
-                  <textarea
-                    id="mensaje-dg"
-                    name="mensaje"
-                    required
-                    rows={4}
-                    placeholder="Qué necesitás, plazos, referencias..."
-                    className="w-full rounded-xl bg-foreground/5 border border-foreground/20 px-4 py-3 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition resize-none"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  disabled={enviando}
-                  className="w-full rounded-xl bg-primary text-primary-foreground font-semibold px-6 py-3.5 hover:bg-primary/90 transition shadow-soft disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                >
-                  {enviando ? (
-                    <>
-                      <Loader2 className="h-4 w-4 animate-spin" />
-                      Enviando...
-                    </>
-                  ) : (
-                    "Enviar mensaje"
-                  )}
-                </button>
               </form>
             )}
           </div>
 
-          <div className="mt-12 text-center space-y-3 text-sm text-foreground/70">
-            <p>
-              <a href="mailto:hola@happenmarketing.com" className="hover:text-primary transition">
-                hola@happenmarketing.com
-              </a>
-            </p>
-            <p>
-              <a href="https://wa.me/59897490180" className="hover:text-primary transition">
-                WhatsApp · +598 97 490 180
-              </a>
-            </p>
-            <p>Puntas de Santiago, 1694 · Montevideo</p>
+          {/* Barra de contacto tipo footer */}
+          <div className="mt-16 pt-10 border-t border-foreground/10">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+              {/* Email y WhatsApp */}
+              <div className="flex flex-col sm:flex-row gap-6">
+                <a
+                  href="mailto:hola@happenmarketing.com"
+                  className="flex items-center gap-3 group"
+                >
+                  <span className="h-10 w-10 rounded-full bg-foreground/10 flex items-center justify-center group-hover:bg-primary transition">
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <rect x="3" y="5" width="18" height="14" rx="2" />
+                      <path d="m3 7 9 6 9-6" />
+                    </svg>
+                  </span>
+                  <span className="text-sm font-medium group-hover:text-primary transition">
+                    hola@happenmarketing.com
+                  </span>
+                </a>
+                <a
+                  href="https://wa.me/59897490180"
+                  className="flex items-center gap-3 group"
+                >
+                  <span className="h-10 w-10 rounded-full bg-foreground/10 flex items-center justify-center group-hover:bg-primary transition">
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M22 16.92V21a1 1 0 0 1-1.11 1A19.86 19.86 0 0 1 2 4.11 1 1 0 0 1 3 3h4.09a1 1 0 0 1 1 .75c.13.96.37 1.9.72 2.81a1 1 0 0 1-.23 1.05l-1.7 1.7a16 16 0 0 0 6.8 6.8l1.7-1.7a1 1 0 0 1 1.05-.23c.91.35 1.85.59 2.81.72a1 1 0 0 1 .76 1Z" />
+                    </svg>
+                  </span>
+                  <span className="text-sm font-medium group-hover:text-primary transition">
+                    +59897490180
+                  </span>
+                </a>
+                <div className="flex items-center gap-3">
+                  <span className="h-10 w-10 rounded-full bg-foreground/10 flex items-center justify-center">
+                    <MapPin className="h-4 w-4" />
+                  </span>
+                  <span className="text-sm font-medium">
+                    Puntas de Santiago, 1694
+                  </span>
+                </div>
+              </div>
+
+              {/* Redes sociales */}
+              <div className="flex gap-3">
+                <a
+                  href="https://www.linkedin.com/company/happen-marketing/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="h-10 w-10 rounded-full border border-foreground/30 flex items-center justify-center text-foreground hover:bg-foreground hover:text-background transition"
+                >
+                  <Linkedin className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://www.instagram.com/somoshappen/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="h-10 w-10 rounded-full border border-foreground/30 flex items-center justify-center text-foreground hover:bg-foreground hover:text-background transition"
+                >
+                  <InstagramIcon className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
