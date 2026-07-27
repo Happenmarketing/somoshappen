@@ -531,7 +531,7 @@ const DisenoGrafico = () => {
               <span className="italic font-light text-primary">Contanos tu proyecto.</span>
             </h2>
             <p className="mt-6 max-w-xl mx-auto text-lg text-foreground/70">
-              Si tenés un proyecto o una necesidad de diseño en mente, escribinos y te ayudamos a definir la mejor propuesta.
+              Si tenés una necesidad de diseño escribimos y te armamos una propuesta a medida.
             </p>
           </div>
 
