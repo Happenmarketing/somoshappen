@@ -479,8 +479,9 @@ const DisenoGrafico = () => {
               <span className="italic font-light text-primary">diseñar</span>.
             </h2>
             <p className="mt-6 md:mt-8 text-lg md:text-xl lg:text-2xl leading-relaxed text-foreground/80 max-w-3xl">
+              Entendemos rápido, pensamos en quién recibe cada pieza y nos aseguramos de que funcione donde va.{" "}
               <span className="italic font-light text-primary">
-                Entendemos rápido, pensamos en quién recibe cada pieza y nos aseguramos de que funcione donde va. Sin que tengas que explicarlo dos veces.
+                Sin que tengas que explicarlo dos veces.
               </span>
             </p>
           </div>
