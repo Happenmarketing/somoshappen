@@ -475,7 +475,8 @@ const DisenoGrafico = () => {
               Porqué elegirnos
             </span>
             <h2 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1]">
-              Pensamos soluciones y las transformamos en diseños con criterio visual.
+              Pensamos soluciones y las transformamos en diseños con{" "}
+              <span className="italic font-light text-primary">criterio visual</span>.
             </h2>
             <p className="mt-6 md:mt-8 text-lg md:text-xl lg:text-2xl leading-relaxed text-foreground/80 max-w-3xl">
               <span className="italic font-light text-primary">
