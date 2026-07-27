@@ -500,8 +500,8 @@ const DisenoGrafico = () => {
       </section>
 
 
-      {/* PRUEBA SOCIAL — placeholder testimonios */}
-      <section className="bg-background py-14 md:py-24 lg:py-32">
+      {/* PRUEBA SOCIAL — slider de logos */}
+      <section className="bg-[hsl(var(--surface-light))] text-[hsl(var(--surface-light-foreground))] py-14 md:py-24 lg:py-32">
         <div className="container">
           <div className="max-w-2xl">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
@@ -512,22 +512,10 @@ const DisenoGrafico = () => {
               <span className="italic font-light text-primary">con nosotros.</span>
             </h2>
           </div>
+        </div>
 
-          {/* TODO: reemplazar por testimonios reales (nombre, cargo, empresa, quote) */}
-          <div className="mt-14 grid md:grid-cols-3 gap-5">
-            {[1, 2, 3].map((i) => (
-              <blockquote key={i} className="rounded-3xl bg-foreground/5 border border-foreground/10 p-8">
-                <p className="text-lg leading-relaxed text-foreground/85">
-                  "Placeholder de testimonio. Espacio reservado para una frase real de
-                  un cliente sobre el trabajo de diseño."
-                </p>
-                <footer className="mt-6">
-                  <p className="text-sm font-semibold">Nombre Apellido</p>
-                  <p className="text-xs text-foreground/60">Cargo · Empresa</p>
-                </footer>
-              </blockquote>
-            ))}
-          </div>
+        <div className="mt-10">
+          <LogoMarquee />
         </div>
       </section>
 
