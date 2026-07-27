@@ -471,11 +471,8 @@ const DisenoGrafico = () => {
       <section className="bg-background py-14 md:py-24 lg:py-32">
         <div className="container">
           <div className="max-w-2xl">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
-              Pensamos soluciones y las transformamos en diseño con criterio visual.
-            </span>
-            <h2 className="mt-4 text-4xl lg:text-6xl font-semibold leading-tight">
-              Pensamos soluciones y las transformamos en diseño con criterio visual.
+            <h2 className="text-4xl lg:text-6xl font-semibold leading-tight">
+              Porqué elegirnos
             </h2>
           </div>
 
