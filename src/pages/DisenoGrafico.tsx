@@ -468,21 +468,23 @@ const DisenoGrafico = () => {
           </div>
         </div>
       )}
-      <section className="bg-background py-14 md:py-24 lg:py-32">
+      <section className="bg-background py-16 md:py-28 lg:py-36">
         <div className="container">
-          <div className="max-w-2xl">
+          <div className="max-w-4xl">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
               Porqué elegirnos
             </span>
-            <h2 className="mt-4 text-4xl lg:text-6xl font-semibold leading-tight whitespace-pre-line">
-              Pensamos soluciones y las transformamos en diseños con criterio visual.{"\n\n"}
+            <h2 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1]">
+              Pensamos soluciones y las transformamos en diseños con criterio visual.
+            </h2>
+            <p className="mt-6 md:mt-8 text-lg md:text-xl lg:text-2xl leading-relaxed text-foreground/80 max-w-3xl">
               <span className="italic font-light text-primary">
                 Entendemos rápido, pensamos en quién recibe cada pieza y nos aseguramos de que funcione donde va. Sin que tengas que explicarlo dos veces.
               </span>
-            </h2>
+            </p>
           </div>
 
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="mt-16 md:mt-24 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {razones.map((r) => (
               <div
                 key={r.n}
