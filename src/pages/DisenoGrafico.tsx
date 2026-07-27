@@ -472,13 +472,10 @@ const DisenoGrafico = () => {
         <div className="container">
           <div className="max-w-2xl">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
-              Porqué elegirnos
+              Pensamos soluciones y las transformamos en diseño con criterio visual.
             </span>
             <h2 className="mt-4 text-4xl lg:text-6xl font-semibold leading-tight">
-              No somos una imprenta creativa.{" "}
-              <span className="italic font-light text-primary">
-                Entendemos rápido, pensamos en quién recibe cada pieza y nos aseguramos de que funcione donde va. Sin que tengas que explicarlo dos veces.
-              </span>
+              Pensamos soluciones y las transformamos en diseño con criterio visual.
             </h2>
           </div>
 
