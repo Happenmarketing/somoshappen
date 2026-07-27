@@ -112,7 +112,7 @@ const razones = [
   },
   {
     n: "02",
-    titulo: "Nos adaptamos a cómo trabajás vos",
+    titulo: "Nos adaptamos a tu forma\u00a0\nde trabajo",
     desc: "Si necesitás un equipo de diseño fijo, lo somos. Si preferís ir por proyecto o por horas, también.",
   },
   {
@@ -528,7 +528,7 @@ const DisenoGrafico = () => {
               Hablemos
             </span>
             <h2 className="mt-4 text-balance text-5xl lg:text-7xl font-semibold leading-[1.05]">
-              <span className="italic font-light text-primary">Tomemos un café.</span>
+              <span className="italic font-light text-primary">Contanos tu proyecto.</span>
             </h2>
             <p className="mt-6 max-w-xl mx-auto text-lg text-foreground/70">
               Si tenés un proyecto o una necesidad de diseño en mente, escribinos y te ayudamos a definir la mejor propuesta.
