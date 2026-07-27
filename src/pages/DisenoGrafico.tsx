@@ -481,7 +481,7 @@ const DisenoGrafico = () => {
             </p>
           </div>
 
-          <div className="mt-16 md:mt-24 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="mt-16 md:mt-24 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {razones.map((r) => (
               <div
                 key={r.n}
