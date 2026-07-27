@@ -93,14 +93,14 @@ const proyectos: Proyecto[] = [
 
 
 const servicios = [
-  { icon: Sparkles, titulo: "Identidad de marca", desc: "Logotipo, sistema visual, guidelines y aplicaciones." },
-  { icon: Package, titulo: "Packaging", desc: "Diseño estructural y gráfico de packaging para productos." },
-  { icon: Newspaper, titulo: "Editorial", desc: "Memorias, catálogos, revistas y publicaciones institucionales." },
-  { icon: Layers, titulo: "Campañas gráficas", desc: "Concepto creativo y adaptaciones para todos los formatos." },
-  { icon: InstaIcon, titulo: "Contenido para redes", desc: "Sistemas visuales y piezas para redes con consistencia de marca." },
-  { icon: Presentation, titulo: "Presentaciones", desc: "PPT y keynotes de alto impacto para directorios y ventas." },
-  { icon: Palette, titulo: "Papelería e identidad aplicada", desc: "Tarjetas, firmas, señalética, kits de bienvenida." },
-  { icon: Brush, titulo: "Ilustración y dirección de arte", desc: "Ilustración a medida y dirección de arte para campañas." },
+  { icon: Sparkles, titulo: "Identidad de marca", desc: "Logotipos, sistemas visuales, brandbooks y guías para que tu marca se vea consistente en todos lados." },
+  { icon: Package, titulo: "Packaging", desc: "Cajas, etiquetas y bolsas diseñadas para destacar en góndola y transmitir la calidad de tu producto." },
+  { icon: Newspaper, titulo: "Editorial", desc: "Catálogos, memorias, revistería y reportes corporativos claros, legibles y bien jerarquizados." },
+  { icon: Layers, titulo: "Campañas gráficas", desc: "Conceptos creativos y adaptaciones multiplataforma para tus lanzamientos o promociones." },
+  { icon: InstaIcon, titulo: "Contenido para redes", desc: "Plantillas, gráficos y sistemas visuales para que tu comunicación digital transmita solidez." },
+  { icon: Presentation, titulo: "Presentaciones", desc: "PPT y Keynotes de alto impacto pensados para reuniones de directorio, inversores y ventas." },
+  { icon: Palette, titulo: "Papelería e identidad aplicada", desc: "Tarjetas, firmas de email, señalética y papelería corporativa con acabado profesional." },
+  { icon: Brush, titulo: "Punto de venta y exhibición", desc: "Materiales para vidrieras, displays, activaciones y piezas de exhibición en local." },
 ];
 
 const razones = [
