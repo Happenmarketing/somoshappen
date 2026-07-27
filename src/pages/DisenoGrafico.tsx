@@ -106,23 +106,18 @@ const servicios = [
 const razones = [
   {
     n: "01",
-    titulo: "Diseño con estrategia",
-    desc: "No hacemos piezas lindas sueltas: cada decisión visual responde a un objetivo de negocio.",
+    titulo: "Enfoque en el receptor",
+    desc: "Analizamos el canal de salida y qué necesita saber quien recibe la pieza para que el diseño responda a tus objetivos.",
   },
   {
     n: "02",
-    titulo: "Equipo senior",
-    desc: "Trabajás directamente con las directoras y un equipo de diseñadores con más de 15 años en el mercado.",
+    titulo: "Nos adaptamos a cómo trabajás vos",
+    desc: "Si necesitás un equipo de diseño fijo, lo somos. Si preferís ir por proyecto o por horas, también.",
   },
   {
     n: "03",
-    titulo: "Estudio boutique",
-    desc: "Pocos clientes a la vez, atención personalizada y foco en calidad, no en volumen.",
-  },
-  {
-    n: "04",
-    titulo: "Sistema, no piezas",
-    desc: "Construimos sistemas visuales escalables que ordenan la marca en el largo plazo.",
+    titulo: "Visión global",
+    desc: "Diseñamos asegurando que cada entrega, por más puntual que sea, mantenga la solidez y coherencia de toda tu marca.",
   },
 ];
 
