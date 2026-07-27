@@ -260,7 +260,7 @@ const DisenoGrafico = () => {
               </a>
             </div>
             <p className="mt-4 text-sm text-foreground/60">
-              +15 años de trayectoria · Respuesta en menos de 24 hs
+              +15 años de trayectoria · Respuestas en menos de 24 hs
             </p>
           </div>
 
