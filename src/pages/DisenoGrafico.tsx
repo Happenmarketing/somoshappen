@@ -534,8 +534,7 @@ const DisenoGrafico = () => {
               <span className="italic font-light text-primary">Tomemos un café.</span>
             </h2>
             <p className="mt-6 max-w-xl mx-auto text-lg text-foreground/70">
-              Si tenés un desafío de comunicación o diseño, aunque no sepas
-              exactamente cuál es, es una buena razón para tomar un café.
+              Si tenés un proyecto o una necesidad de diseño en mente, escribinos y te ayudamos a definir la mejor propuesta.
             </p>
           </div>
 
