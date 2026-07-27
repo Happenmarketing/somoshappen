@@ -439,15 +439,14 @@ const DisenoGrafico = () => {
         <div className="container">
           <div className="max-w-2xl">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
-              Qué diseñamos
+              SOLUCIONES
             </span>
             <h2 className="mt-4 text-4xl lg:text-6xl font-semibold leading-tight">
-              Un estudio completo,{" "}
-              <span className="italic font-light text-primary">a tu medida.</span>
+              ¿Qué necesitás{" "}
+              <span className="italic font-light text-primary">diseñar?</span>
             </h2>
             <p className="mt-6 text-lg opacity-75">
-              Desde una identidad de marca de cero hasta una pieza puntual: si tiene
-              que estar bien diseñado, lo hacemos.
+              Resolvemos tu necesidad puntual asegurando que cada pieza responda a tus objetivos comerciales y dialogue con tu marca.
             </p>
           </div>
 
