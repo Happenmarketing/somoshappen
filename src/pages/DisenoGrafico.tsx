@@ -477,7 +477,7 @@ const DisenoGrafico = () => {
             <h2 className="mt-4 text-4xl lg:text-6xl font-semibold leading-tight">
               No somos una imprenta creativa.{" "}
               <span className="italic font-light text-primary">
-                Somos tu estudio de diseño.
+                Entendemos rápido, pensamos en quién recibe cada pieza y nos aseguramos de que funcione donde va. Sin que tengas que explicarlo dos veces.
               </span>
             </h2>
           </div>
