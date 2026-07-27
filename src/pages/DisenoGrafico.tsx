@@ -232,11 +232,7 @@ const DisenoGrafico = () => {
             </span>
 
             <h1 className="mt-6 text-balance text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-semibold leading-[1.02] text-foreground">
-              Diseño que{" "}
-              <span className="italic font-light text-primary">vende,</span>
-              <br />
-              ordena y{" "}
-              <span className="italic font-light text-primary">construye</span> marca.
+              Diseño gráfico para empresas que quieren que su marca esté a la altura de su negocio.
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg lg:text-xl text-foreground/75 leading-relaxed">
