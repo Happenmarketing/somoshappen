@@ -103,7 +103,7 @@ const servicios = [
   {
     icon: InstaIcon,
     titulo: "Piezas digitales & redes",
-    desc: "Diseño y edición para tus canales digitales. Placas, banners y mailings, más edición de reels y videos cortos para redes sociales.",
+    desc: "Diseño y edición para tus canales digitales. Placas, banners y mailings, presentaciones corporativas. Edición de reels y videos cortos para redes sociales.",
     tags: ["Reels", "1 shot", "Placas", "Banners web", "Mailings"],
   },
   {
