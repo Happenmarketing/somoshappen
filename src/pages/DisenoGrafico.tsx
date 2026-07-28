@@ -26,10 +26,10 @@ type Proyecto = {
   galeria: { src: string; alt: string; bg: string }[];
 };
 
-// Genera galería a partir de imágenes en /public/portfolio/<folder>/01..NN.webp
-const galeriaFrom = (folder: string, count: number, alt: string) =>
-  Array.from({ length: count }, (_, i) => ({
-    src: `/portfolio/${folder}/${String(i + 1).padStart(2, "0")}.webp`,
+// Selección curada por categoría: imágenes fuertes y variadas
+const galeriaPicks = (folder: string, alt: string, files: string[]) =>
+  files.map((f, i) => ({
+    src: `/portfolio/${folder}/${f}.webp`,
     alt: `${alt} — ${i + 1}`,
     bg: "bg-primary/20",
   }));
@@ -41,7 +41,7 @@ const proyectos: Proyecto[] = [
     descripcion: "Logo, paleta, tipografía y sistema gráfico: el ADN visual de la empresa.",
     placeholderBg: "from-primary/40 to-primary/10",
     span: "",
-    galeria: galeriaFrom("branding", 28, "Identidad de marca"),
+    galeria: galeriaPicks("branding", "Identidad de marca", ["01", "03", "04", "05", "13", "14", "17", "18"]),
   },
   {
     titulo: "Piezas digitales & redes",
@@ -49,7 +49,7 @@ const proyectos: Proyecto[] = [
     descripcion: "Posteos, reels, banners, mailings y presentaciones para todos tus canales.",
     placeholderBg: "from-primary/30 to-secondary/40",
     span: "",
-    galeria: galeriaFrom("assets-digitales", 29, "Pieza digital"),
+    galeria: galeriaPicks("assets-digitales", "Pieza digital", ["01", "03", "04", "07", "08", "10", "15", "23"]),
   },
   {
     titulo: "Materiales corporativos & impresos",
@@ -58,8 +58,8 @@ const proyectos: Proyecto[] = [
     placeholderBg: "from-primary/40 to-primary/20",
     span: "",
     galeria: [
-      ...galeriaFrom("brochures-papeleria", 12, "Material corporativo"),
-      ...galeriaFrom("materiales-graficos", 3, "Material corporativo"),
+      ...galeriaPicks("brochures-papeleria", "Material corporativo", ["01", "03", "05", "06", "09", "10", "11"]),
+      ...galeriaPicks("materiales-graficos", "Material corporativo", ["01"]),
     ],
   },
   {
@@ -68,7 +68,7 @@ const proyectos: Proyecto[] = [
     descripcion: "Objetos, kits y regalos con identidad de marca para clientes, equipos y eventos.",
     placeholderBg: "from-secondary/40 to-primary/30",
     span: "",
-    galeria: galeriaFrom("merchandising", 32, "Merchandising"),
+    galeria: galeriaPicks("merchandising", "Merchandising", ["01", "02", "07", "08", "11", "13", "18", "24"]),
   },
   {
     titulo: "Punto de venta",
@@ -76,7 +76,7 @@ const proyectos: Proyecto[] = [
     descripcion: "Banners, exhibidores, carteleras y vidrieras para el local.",
     placeholderBg: "from-primary/20 to-secondary/50",
     span: "",
-    galeria: galeriaFrom("punto-de-venta", 10, "Punto de venta"),
+    galeria: galeriaPicks("punto-de-venta", "Punto de venta", ["01", "02", "05", "06", "08"]),
   },
   {
     titulo: "Campañas integrales",
@@ -84,7 +84,7 @@ const proyectos: Proyecto[] = [
     descripcion: "Vía pública, ruteros, mupis, ómnibus, digital y punto de venta. Todo alineado.",
     placeholderBg: "from-primary/50 to-primary/10",
     span: "",
-    galeria: galeriaFrom("campanas-360", 26, "Campaña"),
+    galeria: galeriaPicks("campanas-360", "Campaña", ["01", "02", "07", "09", "10", "11", "16", "25"]),
   },
 ];
 
