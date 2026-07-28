@@ -120,7 +120,7 @@ const servicios = [
   },
   {
     icon: Store,
-    titulo: "Punto de venta & POP",
+    titulo: "Punto de venta",
     desc: "Presencia en locales y espacios físicos. Banners, exhibidores, carteleras y piezas para vidrieras.",
     tags: ["Banners", "Exhibidores", "Carteleras", "Vidrieras", "Promocionales"],
   },
