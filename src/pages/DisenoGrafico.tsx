@@ -115,7 +115,7 @@ const servicios = [
   {
     icon: Package,
     titulo: "Merchandising & branded items",
-    desc: "Empaques que conectan en góndola. Cajas, etiquetas, fajas y bolsas que transmiten calidad.",
+    desc: "Objetos y piezas físicas para acciones de comunicación, eventos y branding. Bolsas, unboxing, regalos corporativos y todo lo que materializa tu marca fuera de la pantalla.",
     tags: ["Cajas", "Etiquetas", "Fajas", "Bolsas", "Merchandising"],
   },
   {
