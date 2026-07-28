@@ -125,7 +125,7 @@ const servicios = [
     tags: ["Banners", "Exhibidores", "Carteleras", "Vidrieras", "Promocionales"],
   },
   {
-    icon: FileText,
+    icon: Megaphone,
     titulo: "Campañas integrales",
     desc: "Cuando el proyecto necesita más que una pieza. Diseñamos campañas completas: vía pública, ruteros, ómnibus, mupis, digital y punto de venta. Todo alineado, todo con sentido.",
     tags: ["Concepto", "Key visual", "Adaptaciones", "Soportes", "Campañas"],
