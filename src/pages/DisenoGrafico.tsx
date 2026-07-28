@@ -109,7 +109,7 @@ const servicios = [
   {
     icon: Newspaper,
     titulo: "Materiales corporativos & impresos",
-    desc: "Catálogos, revistas, memorias, folletos y cualquier otro soporte físico, listo para imprenta. Claros, bien estructurados y alineados a tu identidad.",
+    desc: "Catálogos, revistas, memorias, folletos, tarjetas, carpetas, membretadas y plantillas. Todo estructurado, listo para imprenta o uso digital, alineado a tu identidad.",
     tags: ["Catálogos", "Revistas", "Memorias", "Folletos", "Reportes"],
   },
   {
