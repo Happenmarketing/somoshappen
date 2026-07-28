@@ -711,6 +711,15 @@ const DisenoGrafico = () => {
                 >
                   <InstagramIcon className="h-4 w-4" />
                 </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TikTok"
+                  className="h-10 w-10 rounded-full border border-foreground/30 flex items-center justify-center text-foreground hover:bg-foreground hover:text-background transition"
+                >
+                  <TikTokIcon className="h-4 w-4" />
+                </a>
               </div>
             </div>
           </div>
