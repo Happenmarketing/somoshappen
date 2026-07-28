@@ -1,5 +1,5 @@
 import { useState, FormEvent, useEffect, useCallback } from "react";
-import { CheckCircle, Loader2, ArrowRight, Sparkles, Palette, Package, Newspaper, Instagram as InstaIcon, Brush, Store, FileText, X, ChevronLeft, ChevronRight, Linkedin, MapPin, Instagram as InstagramIcon } from "lucide-react";
+import { CheckCircle, Loader2, ArrowRight, Sparkles, Palette, Package, Newspaper, Instagram as InstaIcon, Brush, Store, Megaphone, X, ChevronLeft, ChevronRight, Linkedin, MapPin, Instagram as InstagramIcon } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import HappenLogo from "@/components/HappenLogo";
@@ -125,7 +125,7 @@ const servicios = [
     tags: ["Banners", "Exhibidores", "Carteleras", "Vidrieras", "Promocionales"],
   },
   {
-    icon: FileText,
+    icon: Megaphone,
     titulo: "Campañas integrales",
     desc: "Cuando el proyecto necesita más que una pieza. Diseñamos campañas completas: vía pública, ruteros, ómnibus, mupis, digital y punto de venta. Todo alineado, todo con sentido.",
     tags: ["Concepto", "Key visual", "Adaptaciones", "Soportes", "Campañas"],
