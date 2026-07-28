@@ -103,7 +103,7 @@ const servicios = [
   {
     icon: InstaIcon,
     titulo: "Piezas digitales & redes",
-    desc: "Desde reels hasta piezas 1 shot, diseñamos y editamos materiales audiovisuales para tus canales digitales.",
+    desc: "Diseño y edición para tus canales digitales. Placas, banners y mailings, más edición de reels y videos cortos para redes sociales.",
     tags: ["Reels", "1 shot", "Placas", "Banners web", "Mailings"],
   },
   {
