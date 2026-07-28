@@ -126,9 +126,9 @@ const servicios = [
   },
   {
     icon: FileText,
-    titulo: "Materiales corporativos & papelería",
-    desc: "La presencia de tu marca en el día a día. Tarjetas, carpetas, firmas y plantillas profesionales.",
-    tags: ["Tarjetas", "Carpetas", "Membretadas", "Firmas", "Plantillas"],
+    titulo: "Campañas integrales",
+    desc: "Concepto y piezas alineadas para campañas en múltiples soportes. Desde una idea central hasta cada adaptación gráfica.",
+    tags: ["Concepto", "Key visual", "Adaptaciones", "Soportes", "Campañas"],
   },
 ];
 
