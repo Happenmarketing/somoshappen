@@ -121,7 +121,7 @@ const servicios = [
   {
     icon: Store,
     titulo: "Punto de venta",
-    desc: "Presencia en locales y espacios físicos. Banners, exhibidores, carteleras y piezas para vidrieras.",
+    desc: "Banners, exhibidores, carteleras y vidrieras. Todo lo que representa tu marca en el local, coherente y bien resuelto.",
     tags: ["Banners", "Exhibidores", "Carteleras", "Vidrieras", "Promocionales"],
   },
   {
