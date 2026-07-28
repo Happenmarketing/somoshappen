@@ -355,14 +355,14 @@ const DisenoGrafico = () => {
             </p>
           </div>
 
-          <div className="mt-14 grid grid-cols-1 md:grid-cols-12 md:auto-rows-[240px] gap-4">
+          <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {proyectos.map((p, i) => (
               <button
                 key={i}
                 type="button"
                 onClick={() => abrirLightbox(i)}
                 aria-label={`Ver galería de ${p.titulo}`}
-                className={`group relative overflow-hidden rounded-2xl text-left aspect-[4/3] md:aspect-auto bg-gradient-to-br ${p.placeholderBg} ${p.span} focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
+                className={`group relative overflow-hidden rounded-2xl text-left aspect-[4/3] bg-gradient-to-br ${p.placeholderBg} focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
               >
                 {p.galeria[0]?.src ? (
                   <img
