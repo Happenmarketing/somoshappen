@@ -109,7 +109,7 @@ const servicios = [
   {
     icon: Newspaper,
     titulo: "Piezas editoriales & impresos",
-    desc: "Publicaciones claras, bien estructuradas y listas para imprenta. Catálogos, revistas y memorias.",
+    desc: "Catálogos, revistas, memorias, folletos y cualquier otro soporte físico, listo para imprenta. Claros, bien estructurados y alineados a tu identidad.",
     tags: ["Catálogos", "Revistas", "Memorias", "Folletos", "Reportes"],
   },
   {
