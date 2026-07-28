@@ -2,6 +2,7 @@ import { useState, FormEvent } from "react";
 import { Linkedin, Instagram, CheckCircle, Loader2, MapPin } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+import TikTokIcon from "@/components/icons/TikTokIcon";
 
 const Contact = () => {
   const [enviado, setEnviado] = useState(false);

@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import HappenLogo from "@/components/HappenLogo";
 import LogoMarquee from "@/components/LogoMarquee";
+import TikTokIcon from "@/components/icons/TikTokIcon";
 import happenIconComplete from "@/assets/happen-icon-complete.webp";
 
 /**
