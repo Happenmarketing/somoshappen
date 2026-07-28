@@ -127,7 +127,7 @@ const servicios = [
   {
     icon: FileText,
     titulo: "Campañas integrales",
-    desc: "Concepto y piezas alineadas para campañas en múltiples soportes. Desde una idea central hasta cada adaptación gráfica.",
+    desc: "Cuando el proyecto necesita más que una pieza. Diseñamos campañas completas: vía pública, ruteros, ómnibus, mupis, digital y punto de venta. Todo alineado, todo con sentido.",
     tags: ["Concepto", "Key visual", "Adaptaciones", "Soportes", "Campañas"],
   },
 ];
