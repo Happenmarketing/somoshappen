@@ -36,62 +36,58 @@ const galeriaFrom = (folder: string, count: number, alt: string) =>
 
 const proyectos: Proyecto[] = [
   {
-    titulo: "Branding",
-    categoria: "Identidad de marca",
-    descripcion: "Sistemas visuales completos: logotipo, paleta, tipografía, guidelines y aplicaciones.",
+    titulo: "Identidad de marca",
+    categoria: "Branding",
+    descripcion: "Logo, paleta, tipografía y sistema gráfico: el ADN visual de la empresa.",
     placeholderBg: "from-primary/40 to-primary/10",
-    span: "md:col-span-8 md:row-span-2",
-    galeria: galeriaFrom("branding", 28, "Branding"),
+    span: "",
+    galeria: galeriaFrom("branding", 28, "Identidad de marca"),
   },
   {
-    titulo: "Campañas 360",
-    categoria: "Campañas gráficas",
-    descripcion: "Concepto creativo y adaptaciones para diferentes soportes y momentos de comunicación.",
-    placeholderBg: "from-primary/50 to-primary/10",
-    span: "md:col-span-4 md:row-span-1",
-    galeria: galeriaFrom("campanas-360", 26, "Campaña"),
-  },
-  {
-    titulo: "Redes y assets digitales",
-    categoria: "Contenido digital",
-    descripcion: "Sistemas visuales y piezas para redes, mailings y contenido digital.",
+    titulo: "Piezas digitales & redes",
+    categoria: "Digital",
+    descripcion: "Posteos, reels, banners, mailings y presentaciones para todos tus canales.",
     placeholderBg: "from-primary/30 to-secondary/40",
-    span: "md:col-span-4 md:row-span-1",
-    galeria: galeriaFrom("assets-digitales", 29, "Asset digital"),
+    span: "",
+    galeria: galeriaFrom("assets-digitales", 29, "Pieza digital"),
   },
   {
-    titulo: "Merchandising",
-    categoria: "Kits y regalos corporativos",
+    titulo: "Materiales corporativos & impresos",
+    categoria: "Editorial",
+    descripcion: "Catálogos, revistas, memorias, folletos y papelería listos para imprenta.",
+    placeholderBg: "from-primary/40 to-primary/20",
+    span: "",
+    galeria: [
+      ...galeriaFrom("brochures-papeleria", 12, "Material corporativo"),
+      ...galeriaFrom("materiales-graficos", 3, "Material corporativo"),
+    ],
+  },
+  {
+    titulo: "Merchandising & branded items",
+    categoria: "Branded items",
     descripcion: "Objetos, kits y regalos con identidad de marca para clientes, equipos y eventos.",
     placeholderBg: "from-secondary/40 to-primary/30",
-    span: "md:col-span-6 md:row-span-1",
+    span: "",
     galeria: galeriaFrom("merchandising", 32, "Merchandising"),
   },
   {
     titulo: "Punto de venta",
-    categoria: "Retail y activaciones",
-    descripcion: "Piezas gráficas para vidrieras, displays, activaciones y materiales de punto de venta.",
+    categoria: "Retail",
+    descripcion: "Banners, exhibidores, carteleras y vidrieras para el local.",
     placeholderBg: "from-primary/20 to-secondary/50",
-    span: "md:col-span-6 md:row-span-1",
+    span: "",
     galeria: galeriaFrom("punto-de-venta", 10, "Punto de venta"),
   },
   {
-    titulo: "Brochures y papelería",
-    categoria: "Editorial e institucional",
-    descripcion: "Brochures, memorias, catálogos y papelería con diagramación y sistema tipográfico.",
-    placeholderBg: "from-primary/40 to-primary/20",
-    span: "md:col-span-8 md:row-span-1",
-    galeria: galeriaFrom("brochures-papeleria", 12, "Brochure"),
-  },
-  {
-    titulo: "Materiales gráficos",
-    categoria: "Piezas puntuales",
-    descripcion: "Piezas gráficas a medida para campañas, eventos y necesidades específicas.",
-    placeholderBg: "from-primary/30 to-secondary/40",
-    span: "md:col-span-4 md:row-span-1",
-    galeria: galeriaFrom("materiales-graficos", 3, "Material gráfico"),
+    titulo: "Campañas integrales",
+    categoria: "Campañas",
+    descripcion: "Vía pública, ruteros, mupis, ómnibus, digital y punto de venta. Todo alineado.",
+    placeholderBg: "from-primary/50 to-primary/10",
+    span: "",
+    galeria: galeriaFrom("campanas-360", 26, "Campaña"),
   },
 ];
+
 
 
 const servicios = [
@@ -359,14 +355,14 @@ const DisenoGrafico = () => {
             </p>
           </div>
 
-          <div className="mt-14 grid grid-cols-1 md:grid-cols-12 md:auto-rows-[240px] gap-4">
+          <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {proyectos.map((p, i) => (
               <button
                 key={i}
                 type="button"
                 onClick={() => abrirLightbox(i)}
                 aria-label={`Ver galería de ${p.titulo}`}
-                className={`group relative overflow-hidden rounded-2xl text-left aspect-[4/3] md:aspect-auto bg-gradient-to-br ${p.placeholderBg} ${p.span} focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
+                className={`group relative overflow-hidden rounded-2xl text-left aspect-[4/3] bg-gradient-to-br ${p.placeholderBg} focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
               >
                 {p.galeria[0]?.src ? (
                   <img
