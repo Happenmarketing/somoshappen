@@ -420,20 +420,21 @@ const DisenoGrafico = () => {
           </button>
 
           <div
-            className="relative w-full max-w-5xl max-h-[85vh] flex flex-col"
+            className="relative w-full max-w-5xl max-h-[90vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Imagen principal */}
-            <div className="relative flex-1 min-h-[50vh] rounded-2xl overflow-hidden bg-foreground/10 flex items-center justify-center">
+            <div className="relative flex-1 min-h-0 rounded-2xl overflow-hidden bg-foreground/10 flex items-center justify-center">
               {(() => {
                 const img = proyectos[lightbox.proyectoIndex].galeria[lightbox.imagenIndex];
                 return img.src ? (
                   <img
                     src={img.src}
                     alt={img.alt}
-                    className="h-full w-full object-contain"
+                    className="max-h-[70vh] w-auto max-w-full object-contain"
                   />
                 ) : (
+
                   <div className={`h-full w-full ${img.bg} flex items-center justify-center`}>
                     <span className="text-foreground/30 text-xs uppercase tracking-widest">
                       {img.alt}
