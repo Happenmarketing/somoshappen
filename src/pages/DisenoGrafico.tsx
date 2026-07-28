@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import HappenLogo from "@/components/HappenLogo";
 import LogoMarquee from "@/components/LogoMarquee";
+import TikTokIcon from "@/components/icons/TikTokIcon";
 import happenIconComplete from "@/assets/happen-icon-complete.webp";
 
 /**
@@ -709,6 +710,15 @@ const DisenoGrafico = () => {
                   className="h-10 w-10 rounded-full border border-foreground/30 flex items-center justify-center text-foreground hover:bg-foreground hover:text-background transition"
                 >
                   <InstagramIcon className="h-4 w-4" />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TikTok"
+                  className="h-10 w-10 rounded-full border border-foreground/30 flex items-center justify-center text-foreground hover:bg-foreground hover:text-background transition"
+                >
+                  <TikTokIcon className="h-4 w-4" />
                 </a>
               </div>
             </div>
