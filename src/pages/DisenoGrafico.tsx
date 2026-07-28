@@ -314,7 +314,7 @@ const DisenoGrafico = () => {
             </p>
           </div>
 
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {servicios.map(({ icon: Icon, titulo, desc, tags }) => (
               <div
                 key={titulo}
