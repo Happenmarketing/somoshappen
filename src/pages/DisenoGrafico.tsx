@@ -97,7 +97,7 @@ const servicios = [
   {
     icon: Palette,
     titulo: "Identidad de marca",
-    desc: "El sistema visual base para posicionar tu empresa. Diseñamos marcas nuevas o renovamos tu imagen con criterio.",
+    desc: "El sistema visual base de tu empresa. Diseñamos o renovamos tu marca con criterio: logo, paleta, tipografía y sistema gráfico para que todo comunique lo mismo.",
     tags: ["Logo", "Brandbook", "Paleta", "Tipografía", "Sistema gráfico"],
   },
   {
