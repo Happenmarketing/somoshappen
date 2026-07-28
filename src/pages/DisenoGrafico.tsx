@@ -49,7 +49,7 @@ const proyectos: Proyecto[] = [
     descripcion: "Posteos, reels, banners, mailings y presentaciones para todos tus canales.",
     placeholderBg: "from-primary/30 to-secondary/40",
     span: "",
-    galeria: galeriaPicks("assets-digitales", "Pieza digital", ["01", "03", "04", "07", "08", "10", "15", "23"]),
+    galeria: galeriaPicks("assets-digitales", "Pieza digital", ["04", "06", "07", "08", "10", "15", "24", "25"]),
   },
   {
     titulo: "Materiales corporativos & impresos",
@@ -58,7 +58,7 @@ const proyectos: Proyecto[] = [
     placeholderBg: "from-primary/40 to-primary/20",
     span: "",
     galeria: [
-      ...galeriaPicks("brochures-papeleria", "Material corporativo", ["01", "03", "05", "06", "09", "10", "11"]),
+      ...galeriaPicks("brochures-papeleria", "Material corporativo", ["01", "02", "03", "09", "10", "11", "12"]),
       ...galeriaPicks("materiales-graficos", "Material corporativo", ["01"]),
     ],
   },
