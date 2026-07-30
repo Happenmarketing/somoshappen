@@ -56,10 +56,7 @@ const proyectos: Proyecto[] = [
     descripcion: "Catálogos, revistas, memorias, folletos y papelería listos para imprenta.",
     placeholderBg: "from-primary/40 to-primary/20",
     span: "",
-    galeria: [
-      ...galeriaPicks("brochures-papeleria", "Material corporativo", ["01", "02", "03", "09", "10", "11", "12"]),
-      ...galeriaPicks("materiales-graficos", "Material corporativo", ["01"]),
-    ],
+    galeria: galeriaPicks("brochures-papeleria", "Material corporativo", ["n02", "n01", "n03", "n04", "n05"]),
   },
   {
     titulo: "Merchandising & branded items",
