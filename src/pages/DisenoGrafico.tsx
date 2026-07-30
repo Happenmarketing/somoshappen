@@ -172,6 +172,25 @@ const DisenoGrafico = () => {
     return () => window.removeEventListener("keydown", onKey);
   }, [lightbox, siguienteImagen, anteriorImagen]);
 
+  // Precarga todas las imágenes del proyecto activo en el lightbox
+  useEffect(() => {
+    if (!lightbox) return;
+    const galeria = proyectos[lightbox.proyectoIndex].galeria;
+    const links: HTMLLinkElement[] = [];
+    galeria.forEach((img) => {
+      if (!img.src) return;
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = img.src;
+      document.head.appendChild(link);
+      links.push(link);
+    });
+    return () => {
+      links.forEach((l) => l.remove());
+    };
+  }, [lightbox?.proyectoIndex]);
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
