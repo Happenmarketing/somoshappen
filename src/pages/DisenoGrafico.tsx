@@ -64,7 +64,7 @@ const proyectos: Proyecto[] = [
     descripcion: "Objetos, kits y regalos con identidad de marca para clientes, equipos y eventos.",
     placeholderBg: "from-secondary/40 to-primary/30",
     span: "",
-    galeria: galeriaPicks("merchandising", "Merchandising", ["n01", "n03", "n02", "n04", "n05", "n06"]),
+    galeria: galeriaPicks("merchandising", "Merchandising", ["n04", "n01", "n03", "n02", "n05", "n06"]),
   },
   {
     titulo: "Punto de venta",
