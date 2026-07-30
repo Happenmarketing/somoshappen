@@ -80,7 +80,7 @@ const proyectos: Proyecto[] = [
     descripcion: "Vía pública, ruteros, mupis, ómnibus, digital y punto de venta. Todo alineado.",
     placeholderBg: "from-primary/50 to-primary/10",
     span: "",
-    galeria: galeriaPicks("campanas-360", "Campaña", ["n04", "n01", "n02", "n03"]),
+    galeria: galeriaPicks("campanas-360", "Campaña", ["n05", "n04", "n01", "n02", "n03"]),
   },
 ];
 
