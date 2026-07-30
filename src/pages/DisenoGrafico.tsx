@@ -72,7 +72,7 @@ const proyectos: Proyecto[] = [
     descripcion: "Banners, exhibidores, carteleras y vidrieras para el local.",
     placeholderBg: "from-primary/20 to-secondary/50",
     span: "",
-    galeria: galeriaPicks("punto-de-venta", "Punto de venta", ["n01", "n02", "n03", "n04"]),
+    galeria: galeriaPicks("punto-de-venta", "Punto de venta", ["n01", "n02", "n03", "n04", "n05", "n06"]),
   },
   {
     titulo: "Campañas integrales",
