@@ -40,7 +40,7 @@ const proyectos: Proyecto[] = [
     descripcion: "Logo, paleta, tipografía y sistema gráfico: el ADN visual de la empresa.",
     placeholderBg: "from-primary/40 to-primary/10",
     span: "",
-    galeria: galeriaPicks("branding", "Identidad de marca", ["01", "03", "04", "05", "13", "14", "17", "18"]),
+    galeria: galeriaPicks("branding", "Identidad de marca", ["n03", "n01", "n02", "n04", "n05", "n06", "n07", "n08", "n09"]),
   },
   {
     titulo: "Piezas digitales & redes",
