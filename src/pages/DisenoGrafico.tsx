@@ -444,9 +444,12 @@ const DisenoGrafico = () => {
                 const img = proyectos[lightbox.proyectoIndex].galeria[lightbox.imagenIndex];
                 return img.src ? (
                   <img
+                    key={img.src}
                     src={img.src}
                     alt={img.alt}
-                    className="max-h-[70vh] w-auto max-w-full object-contain"
+                    loading="eager"
+                    decoding="async"
+                    className="max-h-[70vh] w-auto max-w-full object-contain animate-fade-in"
                   />
                 ) : (
 
