@@ -48,7 +48,7 @@ const proyectos: Proyecto[] = [
     descripcion: "Posteos, reels, banners, mailings y presentaciones para todos tus canales.",
     placeholderBg: "from-primary/30 to-secondary/40",
     span: "",
-    galeria: galeriaPicks("assets-digitales", "Pieza digital", ["04", "06", "07", "08", "10", "15", "24", "25"]),
+    galeria: galeriaPicks("assets-digitales", "Pieza digital", ["n02", "n01", "n03"]),
   },
   {
     titulo: "Materiales corporativos & impresos",
